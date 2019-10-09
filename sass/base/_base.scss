@@ -1,0 +1,63 @@
+/*  REPAIR DESIGN PROJECT */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+$bp-smallest: 23.44em;  // 375px;
+
+html {
+   
+    font-size: 62.5%;   
+
+
+    @include respond(phone) { 
+        font-size: 50%;  
+    }
+
+
+}
+
+body {
+    box-sizing: border-box;
+    max-width: 144rem;
+    /* box-sizing property by itself is not inherited, but by
+    setting it to each and every element with *{ box-sizing: inherit;} 
+    to inherit, it will automatically be inherited by every element*/
+    padding: 3rem; 
+    @include respond(phone) { 
+        padding: 0;
+    }
+}
+
+header, footer, section, article, video, nav, iframe, div {
+    outline: 1px solid red;
+}
+
+header, footer {
+    background-color: yellow;
+}
+
+nav {
+    background-color: beige;
+}
+
+section:nth-child(odd) {
+    background-color: blue;
+}
+
+section:nth-child(even) {
+    background-color: orangered;
+}
+
+article {
+    background-color: grey;
+}
+
+iframe {
+    background-color: mediumorchid;
+}
