@@ -1,4 +1,3 @@
-/*  REPAIR DESIGN PROJECT */
 
 *,
 *::after,
@@ -25,9 +24,6 @@ html {
 body {
     box-sizing: border-box;
     max-width: 144rem;
-    /* box-sizing property by itself is not inherited, but by
-    setting it to each and every element with *{ box-sizing: inherit;} 
-    to inherit, it will automatically be inherited by every element*/
     padding: 3rem; 
     @include respond(phone) { 
         padding: 0;
