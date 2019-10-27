@@ -1,13 +1,21 @@
 .header {
     position: relative;
-    min-height: 60rem;
+    width: 100%;
+    height: 78.8rem;
+
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    background-color: $color-grey-dark;
 
     &__name {
-        padding: 1rem;
+        padding: 3rem;
+        padding-left: 8.2rem;
         height: 8rem;
         flex: 0 0 25%;
+        color: $color-yellow;
+        font-size: 1.2rem;
+        font-family: FuturaDemic;
 
         @include respond(phone) {
             flex: 0 0 50%;
@@ -15,21 +23,251 @@
     }
 
     &__tel {
-        height: 8rem;
-        flex: 0 0 15%;
+        position: absolute;
+        top: 2.8rem;
+        right: 32rem;
+        flex: 0 0 15%;     
 
         @include respond(phone) {
             flex: 0 0 50%;
         }
     }
 
+    &__tel a {
+        font-size: 1.4rem;
+        color: $color-yellow;
+    }
+
     &__request-call {
+        position: absolute;
+        top: 2rem;
+        right: 10rem;
         height: 8rem;
         flex: 0 0 20%;
+        
 
         @include respond(phone) {
             display: none;
             outline: none;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+        }
+
+        &:active, &:focus {
+            outline: none;
+            transform: translateY(-1px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+        }
+    }
+
+
+
+
+
+    &__navigation {
+        flex: 0 0 40%;
+        padding-top: 3rem;
+        height: 8.3rem;
+        
+        
+        @include respond(phone) {
+            display: none;
+            outline: none;
+        }
+    }
+
+    &__navigation-list {
+        display: flex; 
+        flex: 0 0 100%; 
+        justify-content: space-around;
+    }
+
+    &__navigation-item {
+        flex: 0 0 auto;
+        display: inline-block;
+        letter-spacing: 1px;
+    }
+
+    &__navigation-link:hover, &__navigation-link:active {
+            color: $color-primary-light;
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+            transform: rotate(5deg) scale(1.3);
+    }
+
+    &__navigation-item:first-child  &__navigation-link {
+        color: $color-yellow;
+    }
+
+    &__navigation-item:first-child  &__navigation-link:hover {
+        color: $color-primary-light;
+    }
+
+    &__navigation-link {
+        text-decoration: none;
+        font-family: FuturaBookC;
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: $color-white;
+        display: inline-block;
+        transition: .4s;
+    }
+
+
+
+    &__main {
+        position: relative;
+        height: 93.3%;
+        flex: 0 0 100%;
+        display: flex;
+        // flex-wrap: wrap;
+    }
+
+    &__main-img {
+        position: relative;
+        flex: 0 0 94.3%;
+        display: block;
+        height: 100%;
+        background-image: url(../../img/main.png);
+        //background-size: cover;
+        //background-position: center;
+        background-size:  100% auto;
+        background-repeat: no-repeat;
+        max-height: 75.8rem;
+        //max-height: 83.8rem;
+        //transform: scale(0.9);
+    }
+
+    &__main-instagram {
+        flex: 0 0 5.7%;
+        //height: 70.7rem;
+        height: auto;
+        position: relative;
+        & span {
+            display: inline-block;
+            transform: rotate(90deg);
+            color: $color-yellow;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-family: FuturaDemic;
+            position: absolute;
+            top: 30rem;
+
+            &:after {
+                content: url(../../img/vector.svg); 
+                font-size: 100%;
+                display: block;
+                position: absolute;
+                transform: rotate(90deg);
+                top: -2rem;
+                left: 12rem;
+            }
+        }
+    }
+
+    &__main-text {
+        position: absolute;
+        //top: 17.6rem;
+        // left: 12.4rem;
+        left: 8.6%;
+        top: 23.2%;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-family: YesevaOne;
+        color: $color-white;
+        font-size: 4rem;
+
+        &--first {
+            display: block;
+        }
+
+        &--second {
+            display: block;
+        }
+
+        &--yellow {
+            color: $color-yellow;
+        }
+    }
+
+    &__text {
+        margin-top: 2rem;
+        & p {
+            font-family: FuturaBookC;
+            font-size: 2.2rem;
+            font-weight: 100;
+            color: $color-white;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        margin-top: 3.8rem;
+        justify-content: space-between;
+        width: 85%;
+    }
+
+    &__buttons .btn--orange {
+        width: 20.7rem;
+        text-align: center;
+        flex: 0 0 45%;
+        font-size: 1.2rem;
+        transition: 0.4s;
+
+        &:hover, &:active {
+            background-color: #cf6d17;
+        }
+    }
+
+    &__buttons .btn--transparent {
+        width: 20.7rem;
+        border: 2px solid $color-white;
+        text-align: center;
+        flex: 0 0 45%;
+        font-size: 1.2rem;
+        transition: 0.4s;
+
+        &:hover, &:active {
+            background-color: #cf6d17;
+            border: 2px solid #cf6d17;
+        }
+    }
+
+    &__scroll {
+        transform: translate(-35%, -100%);
+        flex: 0 0 17.2%;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: $color-grey-dark;
+        position: relative;
+        top: 100%;
+        height: 9.7rem;
+        width: 17.2%;
+
+        & span {
+            position: relative;
+            left: 4rem;
+            top: 4rem;
+            text-transform: uppercase;
+            font-family: YesevaOne;
+            font-size: 1.4rem;
+
+            & img {
+                position: absolute;
+                 top: -0.8rem;
+                 left: 11rem;
+                padding-left: .4rem;
+                height: 2.9rem;
+                transition: 0.2s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            } 
         }
     }
 }

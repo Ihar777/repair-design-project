@@ -6,33 +6,207 @@ section {
 
 .section-control {
 
-    &__video {
+    &__video-container {
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 57%;
+        background-size: cover;
+        background-position: center;
+        width: 60%;
         height: 72%;
         max-width: 81.7rem;
         max-height: 43.4rem;
+        overflow: hidden;
+    }
+    
+    &__video {
+        position: absolute;
+        top: -10%;
+        left: 0;
+        height: 110%;
+       transform: scaleX(1.04);
 
         @include respond(phone) {
             min-width: 50%;
         }
     }
-}
 
-.section-repair-types {
-    display: flex;
-    justify-content: space-between;
+    & img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-    @include respond(phone) {
-        flex-direction: column;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    padding: 0 4rem;
+    &__text {
+        position: absolute;
+        width: 70rem;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -58%);
+        font-family: FuturaBookC;
+        color: $color-grey-dark-2;
+        font-size: 2rem;
+
+        & ul {
+            list-style: none;
+        }
+
+        & li {
+            text-align: center;
+        }
+
+        & li:first-child {
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__personal-data {
+        position: absolute;
+        width: 74rem;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+
+    }
+
+    &__name,
+    &__phone {
+        flex: 0 0 20%;
+        display: flex;
+        flex-direction: column;
+        font-family: FuturaBookC;
+
+        & label {
+            flex: 0 0 20%;
+            font-size: 1.5rem;
+            opacity: 0.5;
+            line-height: 1rem;
+        }
+
+        & input {
+            border: none;
+            font-size: 1.8rem;
+            flex: 0 0 80%;
+            line-height: 1rem;
+        }
+
+        &:after {
+            display: block;
+            content: ".";
+            height: 1px;
+            width: 23rem;
+            background-color: $color-grey-dark-2;
+            opacity: 0.7;
+            margin: 0 auto;
+            margin-right: 4rem;
+        }
+    }
+
+    &__submit {
+        flex: 0 0 27%;
+        background-color: $color-yellow;
+        text-align: center;
+        display: block;
+        height: 5rem;
+
+        & button {
+            height: 5rem;
+            width: 20.1rem;
+            border: 0;
+            padding-bottom: 0.8rem;
+            color: $color-white;
+            font-family: FuturaDemiC;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__checkbox {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 74%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        padding-left: 2.2rem;
+        font-family: FuturaBookC;
+        font-size: 1.6rem;
+
+        & input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.8rem;
+        width: 1.8rem;
+        border: 1px solid black;
+        background-color: $color-white;
+    }
+
+    &__checkbox:hover input ~  &__checkmark {
+        background-color: $color-white;
+      }
+
+      &__checkbox input:checked ~  &__checkmark {
+        background-color: $color-yellow;
+        border: 0;
+      }
+
+      &__checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      &__checkbox input:checked ~  &__checkmark::after {
+        display: block;
+      }
+
+      &__checkbox &__checkmark:after {
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid $color-white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+}
+
+.section-repair {
+
+    padding: 0 5.2rem;
+
+    &__types {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        height: 42.1rem;
+        width: 100%;
+        position: relative;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
     &__redecorate{
-        flex: 0 0 33%;
-        background-color: azure;
+        position: relative;
+        flex: 0 0 32%;
+        margin-right: 3rem;
+        max-width: 39.2rem;
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -40,8 +214,10 @@ section {
     }
 
     &__overhaul {
-        flex: 0 0 33%;
-        background-color: brown;
+        position: relative;
+        flex: 0 0 32%;
+        margin-right: 3rem;
+        max-width: 39.2rem;
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -49,12 +225,81 @@ section {
     }
 
     &__designer {
-        flex: 0 0 33%;
-        background-color: chartreuse;
+        position: relative;
+        flex: 0 0 32%;
+        max-width: 39.2rem;
 
         @include respond(phone) {
             flex: 0 0 100%;
             
+        }
+    }
+
+    &__description {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 28.6rem;
+        width: 33rem;
+        background-color: $color-white;
+        padding-left: 3rem;
+
+        & h3 {
+            font-size: 1.8rem;
+            font-family: YesevaOne;
+            margin: 1rem 0;
+        }
+
+        & li {
+            font-family: FuturaBookC;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: $color-grey-dark-3;
+        }
+    }
+
+    &__price {
+        width: 22.8rem;
+        height: 5.4rem;
+        background-color: $color-yellow;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(-50%);
+       
+        & h3 {
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: YesevaOne;
+            font-size: 1.8rem;
+            line-height: 3.8rem;
+            text-align: center;
+        }
+    }
+
+    &__control {
+       // margin-top: 9rem;
+        margin-bottom: 2rem;
+        color: $color-white;
+        font-family: YesevaOne;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+
+        & h2 {
+            margin: 0 auto;
+            width: 14.8%;
+            text-align: center;
+        }
+    }
+
+    &__tools {
+        margin: 0 auto;
+        width: 14.8%;
+        text-align: center;
+
+        & img {
+            margin-right: 0.4rem;
         }
     }
 

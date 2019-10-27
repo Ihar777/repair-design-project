@@ -30,30 +30,45 @@ body {
     }
 }
 
-header, footer, section, article, video, nav, iframe, div {
+.container {
+    margin: 0 auto;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding-top: 1.4rem;
+}
+
+.btn--orange {
+    background-color: $color-yellow;
+    color: $color-white;
+    font-family: FuturaDemic;
+    text-align: center;
+    display: block;
+    width: 16.1rem;
+    height: 4rem;
+}
+
+.btn--transparent {
+    background-color: transparent;
+    color: $color-white;
+    font-family: FuturaDemic;
+    text-align: center;
+}
+
+
+header, footer, section, article, video, nav, iframe, div, li, ul {
     outline: 1px solid red;
 }
 
-header, footer {
+footer {
     background-color: yellow;
-}
-
-nav {
-    background-color: beige;
-}
-
-section:nth-child(odd) {
-    background-color: blue;
-}
-
-section:nth-child(even) {
-    background-color: orangered;
 }
 
 article {
     background-color: grey;
-}
-
-iframe {
-    background-color: mediumorchid;
 }
