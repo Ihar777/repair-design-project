@@ -188,5 +188,10 @@
         & img {
             margin-right: 0.4rem;
         }
+
+        & [src$="dash.jpg"] {
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
     }
 }

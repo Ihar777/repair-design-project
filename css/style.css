@@ -51,15 +51,6 @@ body {
   font-family: FuturaDemic;
   text-align: center; }
 
-header, footer, section, article, video, nav, iframe, div, li, ul {
-  outline: 1px solid red; }
-
-footer {
-  background-color: yellow; }
-
-article {
-  background-color: grey; }
-
 .footer {
   position: relative;
   background-color: gray;
@@ -384,6 +375,9 @@ article {
     text-align: center; }
     .section-slider__surveillance img {
       margin-right: 0.4rem; }
+    .section-slider__surveillance [src$="dash.jpg"] {
+      display: inline-block;
+      margin-bottom: 1.2rem; }
 
 section {
   min-height: 80rem;
@@ -576,7 +570,8 @@ section {
     height: 28.6rem;
     width: 33rem;
     background-color: #fff;
-    padding-left: 3rem; }
+    padding-left: 3rem;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03); }
     .section-repair__description h3 {
       font-size: 1.8rem;
       font-family: YesevaOne;
@@ -593,7 +588,8 @@ section {
     position: absolute;
     top: 100%;
     left: 0;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3); }
     .section-repair__price h3 {
       color: #fff;
       text-transform: uppercase;
@@ -617,48 +613,177 @@ section {
     text-align: center; }
     .section-repair__tools img {
       margin-right: 0.4rem; }
+    .section-repair__tools [src$="dash.jpg"] {
+      display: inline-block;
+      margin-bottom: 1.2rem; }
 
-.section-procedure {
-  display: flex; }
-  .section-procedure__stages {
-    flex: 0 0 50%;
-    background-color: chartreuse; }
-  .section-procedure__request {
-    flex: 0 0 50%;
-    background-color: azure; }
-  @media only screen and (max-width: 23.44em) {
-    .section-procedure {
-      display: none; } }
+.section-samples {
+  background: url(../../img/bg_samples.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8rem; }
+  .section-samples h2 {
+    text-transform: uppercase;
+    font-family: YesevaOne;
+    color: #e3b873;
+    font-size: 2.7rem;
+    margin-bottom: 4.7rem; }
+  .section-samples__text {
+    flex: 0 0 30%;
+    color: #fff;
+    font-family: ProximaNova;
+    font-size: 2rem;
+    padding-left: 10rem;
+    padding-top: 17.8rem; }
+    .section-samples__text ul {
+      list-style: none;
+      height: 52rem;
+      line-height: 2.3; }
+      .section-samples__text ul li span:hover, .section-samples__text ul span:active {
+        cursor: pointer;
+        border-bottom: 1px solid #e3b873;
+        color: #e3b873; }
+      .section-samples__text ul li:first-child span {
+        color: #e3b873;
+        border-bottom: 1px solid #e3b873; }
+  .section-samples__column {
+    position: relative;
+    flex: 0 0 24.5%;
+    display: flex;
+    flex-direction: column; }
+    .section-samples__column--first {
+      transform: translateY(-4%); }
+    .section-samples__column--second {
+      transform: translateY(-11%);
+      margin-right: 10rem; }
+    .section-samples__column img:nth-child(even) {
+      margin-top: 4rem; }
 
 .section-design-project {
+  min-height: 44rem;
+  margin-top: 8rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap; }
+  .section-design-project__heading {
+    flex: 0 0 100%; }
+  .section-design-project__control {
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: YesevaOne;
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+    .section-design-project__control h2 {
+      margin: 0 auto;
+      width: 14.8%;
+      text-align: center; }
+  .section-design-project__tools {
+    margin: 0 auto;
+    width: 14.8%;
+    text-align: center; }
+    .section-design-project__tools img {
+      margin-right: 0.4rem; }
+    .section-design-project__tools [src$="dash.jpg"] {
+      display: inline-block;
+      margin-bottom: 1.2rem; }
   .section-design-project__text {
-    flex: 0 0 100%;
-    background-color: orangered; }
+    width: 76rem;
+    height: 6rem;
+    margin: 0 auto;
+    font-family: FuturaBookC;
+    font-size: 2rem;
+    margin-top: 2.5rem; }
+    .section-design-project__text ul {
+      list-style: none; }
+      .section-design-project__text ul li {
+        text-align: center;
+        line-height: 1.6; }
   .section-design-project__mini {
-    flex: 0 0 33%;
-    background-color: azure; }
+    position: relative;
+    transform: translateY(34%);
+    flex: 0 0 27.2%;
+    height: 42rem;
+    margin-left: 10.2rem; }
+    .section-design-project__mini img {
+      width: 100%;
+      height: 100%; }
     @media only screen and (max-width: 23.44em) {
       .section-design-project__mini {
         flex: 0 0 100%; } }
   .section-design-project__standard {
-    flex: 0 0 33%;
-    background-color: brown; }
+    position: relative;
+    transform: translateY(34%);
+    flex: 0 0 27.2%;
+    height: 42rem; }
+    .section-design-project__standard img {
+      width: 100%;
+      height: 100%; }
     @media only screen and (max-width: 23.44em) {
       .section-design-project__standard {
         flex: 0 0 100%; } }
   .section-design-project__full {
-    flex: 0 0 33%;
-    background-color: chartreuse; }
+    position: relative;
+    transform: translateY(34%);
+    flex: 0 0 27.2%;
+    margin-right: 10.2rem;
+    height: 42rem; }
+    .section-design-project__full img {
+      width: 100%;
+      height: 100%; }
     @media only screen and (max-width: 23.44em) {
       .section-design-project__full {
         flex: 0 0 100%; } }
+  .section-design-project__description {
+    position: absolute;
+    top: 29.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33rem;
+    background-color: #fff;
+    padding-top: 2.2rem;
+    padding-left: 3rem;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03); }
+    .section-design-project__description--mini {
+      height: 23.7rem; }
+    .section-design-project__description--standard {
+      height: 28.6rem; }
+    .section-design-project__description--full {
+      height: 41.4rem; }
+    .section-design-project__description h3 {
+      color: #363636;
+      font-size: 1.8rem;
+      font-family: YesevaOne;
+      margin: 1rem 0; }
+    .section-design-project__description li {
+      font-family: FuturaBookC;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: #959595; }
+  .section-design-project__price {
+    width: 22.8rem;
+    height: 5.4rem;
+    background-color: #e3b873;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3); }
+    .section-design-project__price h3 {
+      color: #fff;
+      text-transform: uppercase;
+      font-family: YesevaOne;
+      font-size: 1.8rem;
+      line-height: 3.8rem;
+      text-align: center; }
 
-@media only screen and (max-width: 23.44em) {
-  .section-steps {
-    display: none; } }
+.section-steps {
+  background-color: #131313;
+  z-index: -1; }
+  @media only screen and (max-width: 23.44em) {
+    .section-steps {
+      display: none; } }
 
 .section-team {
   display: flex;
@@ -725,3 +850,7 @@ section {
 @font-face {
   font-family: "YesevaOne";
   src: "../../css/fonts/YesevaOne.eot"; }
+
+@font-face {
+  font-family: "ProximaNova";
+  src: "../../css/fonts/ProximaNova-Regular.ttf"; }

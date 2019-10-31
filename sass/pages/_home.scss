@@ -244,6 +244,7 @@ section {
         width: 33rem;
         background-color: $color-white;
         padding-left: 3rem;
+        box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
 
         & h3 {
             font-size: 1.8rem;
@@ -267,6 +268,7 @@ section {
         top: 100%;
         left: 0;
         transform: translateY(-50%);
+        box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3);
        
         & h3 {
             color: $color-white;
@@ -301,67 +303,289 @@ section {
         & img {
             margin-right: 0.4rem;
         }
+
+        & [src$="dash.jpg"] {
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
     }
 
 }
 
-.section-procedure {
+// .section-procedure {
+//     display: flex;
+
+//     &__stages {
+//         flex: 0 0 50%;
+//         background-color: chartreuse;
+//     }
+
+//     &__request {
+//         flex: 0 0 50%;
+//         background-color: azure;
+//     }
+
+//     @include respond(phone) {
+//         display: none;
+// }
+// }
+
+.section-samples {
+    background: url(../../img/bg_samples.jpg);
+    background-repeat: no-repeat;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8rem;
 
-    &__stages {
-        flex: 0 0 50%;
-        background-color: chartreuse;
+    & h2 {
+        text-transform: uppercase;
+        font-family: YesevaOne;
+        color: $color-yellow;
+        font-size: 2.7rem;
+        margin-bottom: 4.7rem;
     }
 
-    &__request {
-        flex: 0 0 50%;
-        background-color: azure;
+    &__text {
+        flex: 0 0 30%;
+        color: $color-white;
+        font-family: ProximaNova;
+        font-size: 2rem;
+        padding-left: 10rem;
+        padding-top: 17.8rem;
+
+        & ul {
+            list-style: none;
+            height: 52rem;
+            line-height: 2.3;
+                
+
+                & li span:hover, & span:active {
+                    cursor: pointer;
+                    border-bottom: 1px solid $color-yellow;
+                    color: $color-yellow;
+            }
+
+            & li:first-child span{
+                color: $color-yellow;
+                border-bottom: 1px solid $color-yellow;
+            }
+        }
     }
 
-    @include respond(phone) {
-        display: none;
-}
+    &__column {
+        position: relative;
+        flex: 0 0 24.5%;
+        display: flex;
+        flex-direction: column;
+
+        &--first {
+            transform: translateY(-4%);
+        }
+
+        &--second {
+            transform: translateY(-11%);
+            margin-right: 10rem;
+        }
+        
+
+        & img:nth-child(even) {
+            margin-top: 4rem;
+        }
+    }
 }
 
 .section-design-project{
+    min-height: 44rem;
+    margin-top: 8rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 
+    &__heading {
+        flex: 0 0 100%;     
+    }
+
+    &__control {
+         margin-bottom: 2rem;
+         color: $color-white;
+         font-family: YesevaOne;
+         font-size: 1.4rem;
+         text-transform: uppercase;
+ 
+         & h2 {
+             margin: 0 auto;
+             width: 14.8%;
+             text-align: center;
+         }
+     }
+ 
+     &__tools {
+         margin: 0 auto;
+         width: 14.8%;
+         text-align: center;
+ 
+         & img {
+             margin-right: 0.4rem;
+         }
+
+         & [src$="dash.jpg"] {
+             display: inline-block;
+             margin-bottom: 1.2rem;
+         }
+     }
+
     &__text {
-        flex: 0 0 100%;
-        background-color: orangered;       
+        width: 76rem;
+        height: 6rem;
+        margin: 0 auto;
+        font-family: FuturaBookC;
+        font-size: 2rem;
+        margin-top: 2.5rem;
+
+        & ul {
+            list-style: none;
+
+            & li {
+                text-align: center;
+                line-height: 1.6;
+            }
+            
+        }
     }
     
     &__mini {
-        flex: 0 0 33%;
-        background-color: azure;
+        position: relative;
+        transform: translateY(34%);
+        flex: 0 0 27.2%;
+       // background-image: url(../../img/mini.jpg);
+        height: 42rem;
+        margin-left: 10.2rem;
 
+        & img {
+            width: 100%;
+            height: 100%;
+        }
         @include respond(phone) {
             flex: 0 0 100%;
         }
     }
 
     &__standard {
-        flex: 0 0 33%;
-        background-color: brown;
+        position: relative;
+        transform: translateY(34%);
+        flex: 0 0 27.2%;
+        //background-image: url(../../img/standard.jpg);
+        height: 42rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+        @include respond(phone) {
+            flex: 0 0 100%;
+        }
+    }
+// 28 rem
+    &__full {
+        position: relative;
+        transform: translateY(34%);
+        flex: 0 0 27.2%;
+       // background-image: url(../../img/full.jpg);
+        margin-right: 10.2rem;
+        height: 42rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
 
         @include respond(phone) {
             flex: 0 0 100%;
         }
     }
 
-    &__full {
-        flex: 0 0 33%;
-        background-color: chartreuse;
 
-        @include respond(phone) {
-            flex: 0 0 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &__description {
+        position: absolute;
+        top: 29.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 33rem;
+        background-color: $color-white;
+        padding-top: 2.2rem;
+        padding-left: 3rem;
+        box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
+
+        &--mini {
+            height: 23.7rem;
+        }
+
+        &--standard {
+            height: 28.6rem;
+        }
+
+        &--full {
+            height: 41.4rem;
+        }
+
+        & h3 {
+            color: #363636;
+            font-size: 1.8rem;
+            font-family: YesevaOne;
+            margin: 1rem 0;
+        }
+// 12.7rem
+        & li {
+            font-family: FuturaBookC;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: $color-grey-dark-3;
+        }
+    }
+
+    &__price {
+        width: 22.8rem;
+        height: 5.4rem;
+        background-color: $color-yellow;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(-50%);
+        box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3);
+       
+        & h3 {
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: YesevaOne;
+            font-size: 1.8rem;
+            line-height: 3.8rem;
+            text-align: center;
         }
     }
 }
 
 .section-steps {
+
+    background-color: #131313;
+    z-index: -1;
 
     @include respond(phone) {
         display: none;
