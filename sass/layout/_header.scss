@@ -133,13 +133,10 @@
         background-size:  100% auto;
         background-repeat: no-repeat;
         max-height: 75.8rem;
-        //max-height: 83.8rem;
-        //transform: scale(0.9);
     }
 
     &__main-instagram {
         flex: 0 0 5.7%;
-        //height: 70.7rem;
         height: auto;
         position: relative;
         & span {
@@ -166,8 +163,6 @@
 
     &__main-text {
         position: absolute;
-        //top: 17.6rem;
-        // left: 12.4rem;
         left: 8.6%;
         top: 23.2%;
     }

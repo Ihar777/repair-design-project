@@ -193,7 +193,7 @@ section {
         display: flex;
         justify-content: space-between;
         margin-top: 2rem;
-        height: 42.1rem;
+        min-height: 42.1rem;
         width: 100%;
         position: relative;
 
@@ -356,7 +356,7 @@ section {
 
         & ul {
             list-style: none;
-            height: 52rem;
+            min-height: 52rem;
             line-height: 2.3;
                 
 
@@ -437,7 +437,7 @@ section {
 
     &__text {
         width: 76rem;
-        height: 6rem;
+        min-height: 6rem;
         margin: 0 auto;
         font-family: FuturaBookC;
         font-size: 2rem;
@@ -458,7 +458,6 @@ section {
         position: relative;
         transform: translateY(34%);
         flex: 0 0 27.2%;
-       // background-image: url(../../img/mini.jpg);
         height: 42rem;
         margin-left: 10.2rem;
 
@@ -475,7 +474,6 @@ section {
         position: relative;
         transform: translateY(34%);
         flex: 0 0 27.2%;
-        //background-image: url(../../img/standard.jpg);
         height: 42rem;
 
         & img {
@@ -486,12 +484,11 @@ section {
             flex: 0 0 100%;
         }
     }
-// 28 rem
+
     &__full {
         position: relative;
         transform: translateY(34%);
         flex: 0 0 27.2%;
-       // background-image: url(../../img/full.jpg);
         margin-right: 10.2rem;
         height: 42rem;
 
@@ -505,24 +502,6 @@ section {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     &__description {
         position: absolute;
         top: 29.4rem;
@@ -535,15 +514,15 @@ section {
         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
 
         &--mini {
-            height: 23.7rem;
+            min-height: 23.7rem;
         }
 
         &--standard {
-            height: 28.6rem;
+            min-height: 28.6rem;
         }
 
         &--full {
-            height: 41.4rem;
+            min-height: 41.4rem;
         }
 
         & h3 {
@@ -583,9 +562,135 @@ section {
 }
 
 .section-steps {
-
+    position: relative;
+    padding-top: 42.8rem;
+    display: flex;
     background-color: #131313;
     z-index: -1;
+    min-height: 120rem;
+
+    &__step {
+        flex: 0 0 23.4%;
+        margin-left: 10rem;
+        color: $color-white;
+    }
+
+    &__goal {
+        text-transform: uppercase;
+        margin-bottom: 9.2rem;
+
+        & h5 {
+            margin-bottom: 1rem;
+            font-family: FuturaDemic;
+            font-size: 1.5rem;
+        }
+
+        & h2 {
+            color: $color-yellow;
+            font-family: YesevaOne;
+            font-size: 2.7rem;
+        }
+
+        & h2 img {
+            display: inline-block;
+            margin-left: 6rem;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 10.4rem;
+        & h4 {
+            font-family: YesevaOne;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        & h3 {
+            text-transform: uppercase;
+            color: $color-yellow;
+            margin-bottom: 1.4rem;
+            font-family: YesevaOne;
+            font-size: 1.5rem;
+        }
+
+        & p {
+            font-family: FuturaBookC;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    &__arrows {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: space-between;
+        width: 28.7rem;
+
+        & a img {
+            position: relative;
+            display: inline-block;
+        }
+
+        & a img:hover {
+            padding: 0.4rem;
+            border: 1px solid #ffffff;
+            background: orange;
+        }
+    }
+
+    &__main {
+            display: flex;
+            flex: 0 0 61%;
+            color: $color-white;
+            flex-wrap: wrap;
+    }
+
+    &__list {
+        
+        flex: 0 0 100%;
+        color: $color-white;
+        
+        margin-top: 8.3rem;
+
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin-left: 9%;
+        }
+
+        & ul li {
+            display: inline-block;
+            flex: 0 0 33.3%;
+            opacity: 0.3;
+            margin-bottom: 4rem;
+
+            &:first-child {
+                opacity: 1;
+            }
+
+            & span:nth-child(2) {
+                font-size: 1.5rem;
+                font-family: FuturaBookC;
+                line-height: 1.8rem;
+            }
+
+            & span:first-child {
+                display: block;
+                width: 2rem;
+                line-height: 1.8rem;
+                margin-bottom: 0.6rem;
+                font-family: YesevaOne;
+                border-bottom: 1px solid rgba(227, 184, 115, 0.3);
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__img {
+        flex: 0 0 100%;
+        text-align: right;
+    }
 
     @include respond(phone) {
         display: none;
@@ -593,14 +698,27 @@ section {
 }
 
 .section-team {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    position: relative;
+    background-color: #131313;
+    min-height: 120rem;
+
+
+    &__profile-set {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        position: absolute;
+        transform: translate(+17%, +50%);
+    }
 
     &__profile {
-        flex: 0 0 33%;
-        background-color: blueviolet;
+        position: relative;
+        flex: 0 0 18.9%;
         min-height: 30rem;
+
+        &:not(:first-child) {
+            margin-left: 10.6rem;
+        }
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -608,8 +726,52 @@ section {
     }
 
     &__profile:nth-child(even) {
-        background-color: coral;
+
     }
+
+    &__profile-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 70%);
+        background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 66%, #e3b873 66%);
+        padding-top: 2.2rem;
+        padding-left: 3rem;
+        box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
+        min-height: 13.7rem;
+        min-width: 23.3rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h3 {
+            color: #363636;
+            font-size: 1.8rem;
+            font-family: YesevaOne;
+            margin: 1rem auto;
+            width: 80%;
+            flex: 0 0 100%;
+        }
+
+        & span {
+            font-family: FuturaBookC;
+            font-size: 1.8rem;
+            display: inline-block;
+            width: 80%;
+            flex: 0 0 100%;
+        }
+
+        & h4 {
+            color: $color-white;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+
 
     &__text {
         flex: 0 0 100%;
@@ -618,7 +780,6 @@ section {
 
     &__reviews{
         flex: 0 0 33%;
-        background-color: blueviolet;
         min-height: 30rem;
 
         @include respond(phone) {
@@ -627,7 +788,7 @@ section {
     }
 
     &__reviews:nth-child(even) {
-        background-color: coral;
+
     }
 }
 
@@ -640,7 +801,6 @@ section {
         height: 50%;
         max-width: 88.3rem;
         max-height: 44.5rem;
-        background-color: burlywood;
         left: 50%;
         transform: translate(-50%, -50%);
 
@@ -658,7 +818,6 @@ section {
         height: 55%;
         max-width: 95rem;
         max-height: 40rem;
-        background-color: gray;
 
         @include respond(phone) {
             width: 100%;
