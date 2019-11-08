@@ -187,14 +187,14 @@ section {
 
 .section-repair {
 
-    padding: 0 5.2rem;
+    padding: 0 3.8%;
 
     &__types {
         display: flex;
         justify-content: space-between;
         margin-top: 2rem;
         min-height: 42.1rem;
-        width: 100%;
+        max-width: 127.5rem;
         position: relative;
 
         @include respond(phone) {
@@ -204,9 +204,12 @@ section {
 
     &__redecorate{
         position: relative;
-        flex: 0 0 32%;
-        margin-right: 3rem;
-        max-width: 39.2rem;
+        flex: 1 1 31%;
+        margin-right: 2.4%;
+
+        & img { 
+            max-width: 100%;
+          }
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -215,9 +218,12 @@ section {
 
     &__overhaul {
         position: relative;
-        flex: 0 0 32%;
-        margin-right: 3rem;
-        max-width: 39.2rem;
+        flex: 1 1 31%;
+        margin-right: 2.4%;
+
+        & img { 
+            max-width: 100%;
+          }
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -226,8 +232,11 @@ section {
 
     &__designer {
         position: relative;
-        flex: 0 0 32%;
-        max-width: 39.2rem;
+        flex: 1 1 31%;
+
+        & img { 
+            max-width: 100%;
+          }
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -241,9 +250,9 @@ section {
         left: 50%;
         transform: translate(-50%, -50%);
         height: 28.6rem;
-        width: 33rem;
+        width: 81%;
         background-color: $color-white;
-        padding-left: 3rem;
+        padding-left: 10%;
         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
 
         & h3 {
@@ -699,16 +708,77 @@ section {
 
 .section-team {
     position: relative;
-    background-color: #131313;
-    min-height: 120rem;
+    background-color: $color-grey-light-1;
+    display: flex;
+    min-height: 90rem;
+
+    &__heading {
+        flex: 0 0 100%;  
+        background-color: #131313;   
+    }
+
+    &__control {
+        padding-top: 2.5rem;
+         margin-bottom: 2rem;
+         color: $color-white;
+         font-family: YesevaOne;
+         font-size: 1.4rem;
+         text-transform: uppercase;
+ 
+         & h2 {
+             margin: 0 auto;
+             width: 14.8%;
+             text-align: center;
+             font-family: YesevaOne;
+             font-size: 2rem;
+         }
+     }
+ 
+     &__tools {
+         margin: 0 auto;
+         width: 14.8%;
+         text-align: center;
+ 
+         & img {
+             margin-right: 0.4rem;
+         }
+
+         & [src$="dash.jpg"] {
+             display: inline-block;
+             margin-bottom: 1.2rem;
+         }
+     }
+
+    &__text {
+        width: 100%;
+        margin: 0 auto;
+        color: #ffffff;
+
+        & ul {
+            list-style: none;
+
+            & li {
+                text-align: center;
+                line-height: 1.6;
+
+                & span {
+                    font-family: FuturaBookC;
+                    font-size: 2rem;
+                }
+    
+            }
+            
+        }
+    }
 
 
     &__profile-set {
         display: flex;
+        width: 71.6%;
         justify-content: center;
         margin: 0 auto;
         position: absolute;
-        transform: translate(+17%, +50%);
+        transform: translate(+17%, +70%);
     }
 
     &__profile {
@@ -716,8 +786,19 @@ section {
         flex: 0 0 18.9%;
         min-height: 30rem;
 
+        img:last-child {
+            width: 100%;
+        }
+
         &:not(:first-child) {
-            margin-left: 10.6rem;
+            margin-left: 10.3%;
+        }
+
+        img:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
         }
 
         @include respond(phone) {
@@ -736,7 +817,6 @@ section {
         transform: translate(-50%, 70%);
         background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 66%, #e3b873 66%);
         padding-top: 2.2rem;
-        padding-left: 3rem;
         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
         min-height: 13.7rem;
         min-width: 23.3rem;
@@ -744,6 +824,12 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        & * {
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
 
         & h3 {
             color: #363636;
@@ -758,6 +844,7 @@ section {
             font-family: FuturaBookC;
             font-size: 1.8rem;
             display: inline-block;
+            color: #959595;
             width: 80%;
             flex: 0 0 100%;
         }
@@ -773,14 +860,111 @@ section {
     }
 
 
-    &__text {
+    &__desc {
         flex: 0 0 100%;
         min-height: 30rem;
     }
 
+    &__summary {
+        position: absolute;
+        width: 70rem;
+        top: 78%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: FuturaBookC;
+        color: $color-grey-dark-2;
+        font-size: 2rem;
+
+        & ul {
+            list-style: none;
+        }
+
+        & li {
+            text-align: center;
+        }
+
+        & li:first-child {
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.section-clients {
+    min-height: 95rem;
+    position: relative;
+    background-color: $color-grey-light-1;
+
+
+    &__heading {
+        flex: 0 0 100%;   
+        margin-bottom: 6rem;
+    }
+
+    &__control {
+         margin-bottom: 2rem;
+         color: #181818;
+         font-family: YesevaOne;
+         font-size: 2rem;
+         text-transform: uppercase;
+ 
+         & h2 {
+             margin: 0 auto;
+             width: 14.8%;
+             text-align: center;
+             font-family: YesevaOne;
+             font-size: 2rem;
+         }
+     }
+ 
+     &__tools {
+         margin: 0 auto;
+         width: 14.8%;
+         text-align: center;
+ 
+         & img {
+             margin-right: 0.4rem;
+         }
+
+         & [src$="dash.jpg"] {
+             display: inline-block;
+             margin-bottom: 1.2rem;
+         }
+     }
+
+    &__text {
+        width: 76rem;
+        min-height: 6rem;
+        margin: 0 auto;
+        font-size: 2rem;
+        color: $color-grey-dark-2;
+        font-family: FuturaBookC;
+
+        & ul {
+            list-style: none;
+
+            & li {
+                text-align: center;
+                line-height: 1.6;
+
+                & span {
+                    font-family: FuturaBookC;
+                    font-size: 2rem;
+                }
+    
+            }
+            
+        }
+    }
+
+    &__reviews-set {
+        display: flex;
+        justify-content: center;
+    }
     &__reviews{
-        flex: 0 0 33%;
-        min-height: 30rem;
+        position: relative;
+        flex: 0 0 26.1%;
+        height: 42.8rem;
+        background-color: $color-white;
 
         @include respond(phone) {
             display: none;
@@ -788,15 +972,88 @@ section {
     }
 
     &__reviews:nth-child(even) {
+        margin: 0 5.4rem;
+    }
+    &__reviews-header {
+        display: flex;
 
+        & img {
+            flex: 0 0 20.5%;
+            margin: 2rem;
+        }
+
+        & h3 {
+            font-family: YesevaOne;
+            font-size: 1.8rem;
+            margin-top: 4rem;
+            margin-right: 4rem;
+        }
+    }
+    &__reviews-text {
+        font-size: 1.5rem;
+        font-family: FuturaBookC;
+        line-height: 180%;
+        color: $color-grey-dark-3;
+        padding-left: 1rem;
+        padding-right: 1.4rem;
+    }
+
+    &__reviews-time {
+        display: flex;
+        justify-content: space-around;
+        width: 78%;
+        height: 5.4rem;
+        background-color: $color-yellow;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(-50%);
+        box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3);
+
+        & span {
+            flex: 0 0 12%;
+            margin-top: 1rem;
+
+            &.vector {
+                flex: 0 0 1%;
+                margin-top: 0;
+            }
+        }
+       
+        & h3 {
+            flex: 0 0 35%;
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: YesevaOne;
+            font-size: 1.8rem;
+            line-height: 3.8rem;
+            text-align: center;
+            margin-top: 1rem;
+
+            &:nth-child(2) {
+                flex: 0 0 20%;
+            }
+        }
     }
 }
 
 .section-contacts {
+    background-image: url('../../img/map_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 85rem;
+
+    &__questions-wrapper {
+        position: relative;
+        margin: auto;
+        width: 59%;
+        height: 84.5%;
+    }
 
     &__questions {
         position: absolute;
-        opacity: 0.8;
+        background-color: $color-black;
+        opacity: 1;
         width: 61.3%;
         height: 50%;
         max-width: 88.3rem;
@@ -804,20 +1061,218 @@ section {
         left: 50%;
         transform: translate(-50%, -50%);
 
+        & h2 {
+            position: relative;
+            width: 51%;
+            margin: 0 auto;
+            margin-top: 3.5rem;
+            color: $color-white;
+            font-family: YesevaOne;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 3.6rem;
+        }
+
+        & form {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    
+        &__name,
+        &__phone,
+        &__question,
+        &__checkbox {
+            position: relative;
+            flex: 0 0 20%;
+            display: flex;
+            flex-direction: column;
+            font-family: FuturaBookC;
+            margin-bottom: 3.2rem;  
+            opacity: 1;                                               
+    
+            & label {
+                flex: 0 0 20%;
+                font-size: 1.5rem;
+                opacity: 0.5;
+                line-height: 1rem;
+                color: $color-white;                       
+                padding-bottom: 0.8rem;
+
+                &:not(input) {
+                    padding-top: 0.6rem;
+                }
+            }
+    
+            & input {
+                border: none;
+                font-size: 1.8rem;
+                flex: 0 0 20%;
+                line-height: 1rem;
+                color: $color-white;
+                font-family: FuturaBookC;
+                font-size: 1.8rem;
+                background-color: $color-black;
+            }
+    
+            &:after {
+                display: block;
+                content: ".";
+                height: 1px;
+                width: 100%;
+                background-color: $color-grey-dark-2;
+                opacity: 0.7;
+                margin: 0 auto;
+            }
+
+        }
+
+        &__question,
+        &__checkbox {
+            flex: 0 0 100%;
+        }
+
+        &__checkbox:after {
+            display: block;
+            content: "";
+            height: 0px;
+            width: 100%;
+            background-color: $color-white;
+            opacity: 1;
+            margin: 0 auto;
+            margin-right: 4rem;
+        }
+    
+        &__submit {
+            flex: 0 0 27%;
+            background-color: $color-yellow;
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            height: 5rem;
+    
+            & button {
+                height: 5rem;
+                width: 20.1rem;
+                border: 0;
+                padding-bottom: 0.8rem;
+                color: $color-white;
+                font-family: FuturaDemiC;
+                font-size: 1.5rem;
+
+                &:hover,
+                &:active {
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        &__checkbox {
+            display: block;
+            cursor: pointer;
+            padding-left: 2.2rem;
+            font-family: FuturaBookC;
+            font-size: 1.6rem;
+    
+            & input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    
+        &__checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.8rem;
+            width: 1.8rem;
+            border: 1px solid black;
+            background-color: $color-white;
+        }
+    
+        &__checkbox:hover input ~  &__checkmark {
+            background-color: $color-white;
+          }
+    
+          &__checkbox input:checked ~  &__checkmark {
+            background-color: $color-yellow;
+            border: 0;
+          }
+    
+          &__checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+    
+          &__checkbox input:checked ~  &__checkmark::after {
+            display: block;
+          }
+    
+          &__checkbox &__checkmark:after {
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid $color-white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+
         @include respond(phone) {
             min-width: 100%;
         }
     }
 
+    &__contacts {
+        min-height: 10rem;
+        width: 50%;
+        position: relative;
+        top: 25rem;
+        margin: 0 auto;
+
+        & ul {
+            list-style-type: none;
+             
+            & li {
+                text-align: center;
+                font-family: YesevaOne;
+                font-size: 2rem;
+                text-transform: uppercase;
+                padding-bottom: 0.4rem;
+                color: $color-yellow;
+
+                &:last-child {
+                    margin-top: 2rem;
+
+                    &:hover,
+                    &:active {
+                        cursor: pointer;
+                    }
+
+                    & img:nth-of-type(2) {
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
     &__map {
         position: absolute;
-        top: 40%;
+        top: 46%;
         left: 50%;
         transform: translateX(-50%);
         width: 65%;
         height: 55%;
         max-width: 95rem;
         max-height: 40rem;
+        background-image: url('../../img/map.jpg');
 
         @include respond(phone) {
             width: 100%;
