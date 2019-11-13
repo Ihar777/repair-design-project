@@ -17,6 +17,11 @@
         font-size: 1.2rem;
         font-family: FuturaDemic;
 
+        @include respond (tab-land) {
+            padding-left: 6rem;
+            padding-right: 1.6rem;
+        }
+
         @include respond(phone) {
             flex: 0 0 50%;
         }
@@ -26,7 +31,11 @@
         position: absolute;
         top: 2.8rem;
         right: 32rem;
-        flex: 0 0 15%;     
+        flex: 0 0 15%;  
+        
+        @include respond(tab-land) {
+            right: 22rem;
+        }
 
         @include respond(phone) {
             flex: 0 0 50%;
@@ -45,6 +54,9 @@
         height: 8rem;
         flex: 0 0 20%;
         
+        @include respond (tab-land) {
+            right: 4rem;
+        }
 
         @include respond(phone) {
             display: none;
@@ -130,7 +142,7 @@
         display: block;
         height: 100%;
         background-image: url(../../img/main.png);
-        background-size:  100% auto;
+        background-size:  cover;
         background-repeat: no-repeat;
         max-height: 75.8rem;
     }
@@ -149,6 +161,10 @@
             position: absolute;
             top: 30rem;
 
+            @include respond(tab-land) {
+                left: -1rem;
+            }
+
             &:after {
                 content: url(../../img/vector.svg); 
                 font-size: 100%;
@@ -157,6 +173,10 @@
                 transform: rotate(90deg);
                 top: -2rem;
                 left: 12rem;
+
+                @include respond(tab-land) {
+                    top: -2.4rem;
+                }
             }
         }
     }
@@ -248,6 +268,12 @@
             font-family: YesevaOne;
             font-size: 1.4rem;
 
+            @include respond(tab-land) {
+                left: 1rem;
+                top: 3rem;
+            }
+            
+
             & img {
                 position: absolute;
                  top: -0.8rem;
@@ -255,6 +281,12 @@
                 padding-left: .4rem;
                 height: 2.9rem;
                 transition: 0.2s;
+
+                @include respond (tab-land) {
+                    left: 10.4rem;
+                    height: 2.5rem;
+                    top: -0.6rem;
+                }
 
                 &:hover {
                     transform: scale(1.2);

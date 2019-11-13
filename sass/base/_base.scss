@@ -13,11 +13,24 @@ html {
    
     font-size: 62.5%;   
 
+        // This defines what 1 rem is
+         /* 62.5% equals to 10px (10px/16px = 0.625) */
+
+        // LARGER SCREENS SHOULD ALWAYS BE PUT BEFORE SMALLER SCREENS
+    
+        @include respond(tab-land) { // width < 1260
+            font-size: 56.25%;  // 1rem = 9px, 9/16 = 56.25% 
+            // changing font-size is the most important change for tab-land
+            // it makes the whole page smaller
+        }
+    
+        @include respond(tab-port) { // width < 900
+            font-size: 50%; // 1rem = 8px, 8/16 = 50%
+        }
 
     @include respond(phone) { 
         font-size: 50%;  
     }
-
 
 }
 

@@ -1,7 +1,6 @@
 .footer {
     position: relative;
     width: 100%;
-    min-height: 8rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -16,6 +15,11 @@
         font-size: 1.2rem;
         font-family: FuturaDemic;
 
+        @include respond (tab-land) {
+            padding-left: 6rem;
+            padding-right: 1.6rem;
+        }
+
         @include respond(phone) {
             flex: 0 0 50%;
         }
@@ -25,7 +29,11 @@
         position: absolute;
         top: 2.8rem;
         right: 32rem;
-        flex: 0 0 15%;     
+        flex: 0 0 15%;  
+        
+        @include respond(tab-land) {
+            right: 22rem;
+        }
 
         @include respond(phone) {
             flex: 0 0 50%;
@@ -44,6 +52,10 @@
         height: 8rem;
         flex: 0 0 20%;
         
+        @include respond (tab-land) {
+            right: 4rem;
+        }
+
         @include respond(phone) {
             display: none;
             outline: none;
