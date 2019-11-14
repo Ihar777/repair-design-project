@@ -269,6 +269,15 @@ section {
         padding-left: 10%;
         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.03);
 
+        @include respond(tab-port) {
+            top: 86%;
+        }
+
+        @include respond(tab-port2) {
+            top: 80%;
+            height: 30rem;
+        }
+
         & h3 {
             font-size: 1.8rem;
             font-family: YesevaOne;
@@ -282,32 +291,21 @@ section {
             color: $color-grey-dark-3;
         }
     }
+
+    @include price;
+
     &__price {
-        width: 22.8rem;
-        height: 5.4rem;
-        background-color: $color-yellow;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        transform: translateY(-50%);
-        box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3);
-
-        @include respond(tab-land) {
-            width: 18.2rem;
-            height: 4.3rem;
+        @include respond (tab-land) {
+                width: 73%;
         }
-     
-        & h3 {
-            color: $color-white;
-            text-transform: uppercase;
-            font-family: YesevaOne;
-            font-size: 1.8rem;
-            line-height: 3.8rem;
-            text-align: center;
 
-            @include respond(tab-land) {
-                font-size: 1.6rem;
-                line-height: 3rem;
+        @include respond(tab-port2) {
+            width: 84%;
+        }
+
+        & h3 {
+            @include respond (tab-port) {
+                font-size: 1.5rem;
             }
         }
     }
@@ -327,20 +325,26 @@ section {
         }
     }
 
-    &__tools {
-        margin: 0 auto;
-        width: 14.8%;
-        text-align: center;
+    @include heading-logo;
 
-        & img {
-            margin-right: 0.4rem;
-        }
+    // &__tools {
+    //     margin: 0 auto;
+    //     width: 14.8%;
+    //     text-align: center;
 
-        & [src$="dash.jpg"] {
-            display: inline-block;
-            margin-bottom: 1.2rem;
-        }
-    }
+    //     & img {
+    //         margin-right: 0.4rem;
+    //     }
+
+    //     & [src$="dash.jpg"] {
+    //         display: inline-block;
+    //         margin-bottom: 1.2rem;
+    //     }
+
+    //     @include respond(tab-port) {
+    //         width: 40%;
+    //     }
+    // }
 
 }
 
@@ -366,6 +370,11 @@ section {
         color: $color-yellow;
         font-size: 2.7rem;
         margin-bottom: 4.7rem;
+
+        @include respond (tab-port2) {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
     }
 
     &__text {
@@ -380,7 +389,10 @@ section {
         @include respond(tab-land) {
             padding-left: 6rem;
             padding-top: 2rem;
-            height: 56rem;
+        }
+
+        @include respond(tab-port2) {
+            padding-left: 4rem;
         }
 
         & ul {
@@ -435,6 +447,10 @@ section {
 
         & img:nth-child(even) {
             margin-top: 4rem;
+
+            @include respond (tab-port) {
+                margin-top: 2rem;
+            }
         }
     }
 }
@@ -468,21 +484,27 @@ section {
              text-align: center;
          }
      }
- 
-     &__tools {
-         margin: 0 auto;
-         width: 14.8%;
-         text-align: center;
- 
-         & img {
-             margin-right: 0.4rem;
-         }
 
-         & [src$="dash.jpg"] {
-             display: inline-block;
-             margin-bottom: 1.2rem;
-         }
-     }
+     @include heading-logo;
+ 
+    //  &__tools {
+    //      margin: 0 auto;
+    //      width: 14.8%;
+    //      text-align: center;
+
+    //      @include respond (tab-port) {
+    //          width: 40%;
+    //      }
+ 
+    //      & img {
+    //          margin-right: 0.4rem;
+    //      }
+
+    //      & [src$="dash.jpg"] {
+    //          display: inline-block;
+    //          margin-bottom: 1.2rem;
+    //      }
+    //  }
 
     &__text {
         width: 76rem;
@@ -578,6 +600,10 @@ section {
             top: 58%;
         }
 
+        @include respond(tab-port) {
+            top: 48%;
+        }
+
         &--mini {
             max-height: 23.7rem;
         }
@@ -596,7 +622,7 @@ section {
             font-family: YesevaOne;
             margin: 1rem 0;
         }
-// 12.7rem
+
         & li {
             font-family: FuturaBookC;
             font-size: 1.5rem;
@@ -605,35 +631,8 @@ section {
         }
     }
 
-    &__price {
-        width: 22.8rem;
-        height: 5.4rem;
-        background-color: $color-yellow;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        transform: translateY(-50%);
-        box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3);
-
-        @include respond(tab-land) {
-            width: 18.2rem;
-            height: 4.3rem;
-        }
-       
-        & h3 {
-            color: $color-white;
-            text-transform: uppercase;
-            font-family: YesevaOne;
-            font-size: 1.8rem;
-            line-height: 3.8rem;
-            text-align: center;
-
-            @include respond(tab-land) {
-                font-size: 1.6rem;
-                line-height: 3rem;
-            }
-        }
-    }
+    @include price;
+ 
 }
 
 .section-steps {
@@ -656,6 +655,12 @@ section {
         @include respond(tab-land) {
             margin-left: 6rem;
         } 
+
+        @include respond(tab-port) {
+            flex: 0 0 30%;
+            margin-left: 4rem;
+            margin-bottom: 6rem;
+        }
     }
 
     &__goal {
@@ -676,7 +681,12 @@ section {
 
         & h2 img {
             display: inline-block;
-            margin-left: 6rem;
+            margin-left: 4rem;
+
+            @include respond(tab-land) {
+                margin-left: 2rem;
+                max-width: 28%;
+            }
         }
     }
 
@@ -686,6 +696,7 @@ section {
         @include respond(tab-land) {
             margin-bottom: 6rem;
         }
+
         & h4 {
             font-family: YesevaOne;
             font-size: 1.8rem;
@@ -704,6 +715,10 @@ section {
             font-family: FuturaBookC;
             font-size: 1.5rem;
             line-height: 2.5rem;
+
+            @include respond(tab-port) {
+                font-size: 1.6rem;
+            }
         }
     }
 
@@ -712,6 +727,11 @@ section {
         display: flex;
         justify-content: space-between;
         width: 28.7rem;
+
+        @include respond(tab-port) {
+            margin-top: 1rem;
+            width: 100%;
+        }
 
         & a img {
             position: relative;
@@ -745,6 +765,11 @@ section {
             flex-wrap: wrap;
             list-style: none;
             margin-left: 9%;
+
+            @include respond(tab-port) {
+                margin-left: 2%;
+                justify-content: space-between;
+            }
         }
 
         & ul li {
@@ -753,12 +778,16 @@ section {
             opacity: 0.3;
             margin-bottom: 4rem;
 
+            @include respond(tab-port) {
+                flex: 0 0 31%;
+            }
+
             &:first-child {
                 opacity: 1;
             }
 
             & span:nth-child(2) {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 font-family: FuturaBookC;
                 line-height: 1.8rem;
             }
@@ -770,22 +799,29 @@ section {
                 margin-bottom: 0.6rem;
                 font-family: YesevaOne;
                 border-bottom: 1px solid rgba(227, 184, 115, 0.3);
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
         }
     }
 
     &__img {
         flex: 0 0 100%;
-        //text-align: right;
-        // display: block;
         height: 100%;
         max-width: 76.5rem;
         margin-left: 1rem;
         background: url('../../img/img_steps.jpg');
         background-repeat:no-repeat;
-background-size:contain;
-// background-position: center;
+        background-size:contain;
+
+        @include respond (tab-port) {
+            margin-left: 2rem;
+           
+        }
+
+        @include respond(tab-port2) {
+           max-width: 48rem;
+        }
+
     }
 
     @include respond(phone) {
@@ -797,7 +833,7 @@ background-size:contain;
     position: relative;
     background-color: $color-grey-light-1;
     display: flex;
-    min-height: 85rem;
+    min-height: 90rem;
 
     &__heading {
         flex: 0 0 100%;  
@@ -813,7 +849,7 @@ background-size:contain;
          text-transform: uppercase;
 
          @include respond(tab-land) {
-            padding-top: 0rem;
+            padding-top: 4rem;
             margin-bottom: 1rem;
         } 
  
@@ -825,21 +861,27 @@ background-size:contain;
              font-size: 2rem;
          }
      }
- 
-     &__tools {
-         margin: 0 auto;
-         width: 14.8%;
-         text-align: center;
- 
-         & img {
-             margin-right: 0.4rem;
-         }
 
-         & [src$="dash.jpg"] {
-             display: inline-block;
-             margin-bottom: 1.2rem;
-         }
-     }
+     @include heading-logo;
+ 
+    //  &__tools {
+    //      margin: 0 auto;
+    //      width: 14.8%;
+    //      text-align: center;
+
+    //      @include respond (tab-port) {
+    //          width: 40%;
+    //      }
+ 
+    //      & img {
+    //          margin-right: 0.4rem;
+    //      }
+
+    //      & [src$="dash.jpg"] {
+    //          display: inline-block;
+    //          margin-bottom: 1.2rem;
+    //      }
+    //  }
 
     &__text {
         width: 100%;
@@ -860,6 +902,9 @@ background-size:contain;
     
             }
             
+            @include respond(tab-land) {
+                padding-bottom: 28rem;
+            }
         }
     }
 
@@ -873,8 +918,17 @@ background-size:contain;
         transform: translate(+17%, +70%);
 
         @include respond(tab-land) {
-            transform: translate(+17%, +78%);
+            transform: translate(+9%, +78%);
+            width: 84%;
         } 
+
+        @include respond(tab-port) {
+            transform: translate(+9%, +90%);
+        }
+
+        @include respond(tab-port2) {
+            transform: translate(+9%, +100%);
+        }
     }
 
     &__profile {
@@ -887,7 +941,7 @@ background-size:contain;
         }
 
         &:not(:first-child) {
-            margin-left: 10.3%;
+            margin-left: 8%;
         }
 
         img:first-child {
@@ -899,6 +953,10 @@ background-size:contain;
             @include respond(tab-land) {
             transform: translate(-50%, -50%) scale(0.8);
             } 
+
+            @include respond(tab-port) {
+                transform: translate(-50%, -50%) scale(0.6);
+                } 
         }
 
         @include respond(phone) {
@@ -930,6 +988,12 @@ background-size:contain;
             padding-top: 1.6rem;
         } 
 
+        @include respond(tab-port) {
+            width: 94%;
+            transform: translate(-50%, 34%);
+            padding-top: 0.6rem;
+            } 
+
         & * {
             display: inline-block;
             text-align: center;
@@ -945,8 +1009,14 @@ background-size:contain;
             flex: 0 0 100%;
 
             @include respond(tab-land) {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
+                padding: 0 3.3rem;
             } 
+
+            @include respond(tab-port) {
+                font-size: 2.4rem;
+                padding: 0 2rem;
+                } 
         }
 
         & span {
@@ -958,7 +1028,11 @@ background-size:contain;
             flex: 0 0 100%;
 
             @include respond(tab-land) {
-                padding-bottom: 1rem;
+                padding-bottom: 2rem;
+            } 
+
+            @include respond(tab-port) {
+                padding-bottom: 0.4rem;
             } 
         }
 
@@ -972,6 +1046,11 @@ background-size:contain;
 
             @include respond(tab-land) {
                 padding-bottom: 1rem;
+                font-size: 1.6rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 1.6rem;
             }
         }
     }
@@ -985,7 +1064,7 @@ background-size:contain;
     &__summary {
         position: absolute;
         width: 70rem;
-        top: 78%;
+        top: 82%;
         left: 50%;
         transform: translateX(-50%);
         font-family: FuturaBookC;
@@ -1003,6 +1082,18 @@ background-size:contain;
         & li:first-child {
             padding-bottom: 1rem;
         }
+
+        @include respond(tab-land) {
+            top: 88%;
+        }
+
+        @include respond(tab-port) {
+            top: 84%;
+        }
+
+        @include respond(tab-port2) {
+            top: 80%;
+        }
     }
 }
 
@@ -1010,11 +1101,17 @@ background-size:contain;
     min-height: 95rem;
     position: relative;
     background-color: $color-grey-light-1;
+    padding-top: 4rem;
 
+    @include respond(tab-port) {
+        padding-bottom: 28rem;
+    }
 
     &__heading {
         flex: 0 0 100%;   
         margin-bottom: 6rem;
+
+ 
     }
 
     &__control {
@@ -1032,21 +1129,27 @@ background-size:contain;
              font-size: 2rem;
          }
      }
- 
-     &__tools {
-         margin: 0 auto;
-         width: 14.8%;
-         text-align: center;
- 
-         & img {
-             margin-right: 0.4rem;
-         }
 
-         & [src$="dash.jpg"] {
-             display: inline-block;
-             margin-bottom: 1.2rem;
-         }
-     }
+     @include heading-logo;
+ 
+    //  &__tools {
+    //      margin: 0 auto;
+    //      width: 14.8%;
+    //      text-align: center;
+ 
+    //      & img {
+    //          margin-right: 0.4rem;
+    //      }
+
+    //      & [src$="dash.jpg"] {
+    //          display: inline-block;
+    //          margin-bottom: 1.2rem;
+    //      }
+
+    //      @include respond(tab-port) {
+    //          width: 40%;
+    //      }
+    //  }
 
     &__text {
         width: 76rem;
@@ -1087,6 +1190,11 @@ background-size:contain;
             flex: 0 0 30.6%;
         }
 
+        @include respond(tab-port2) {
+            height: 48rem;
+            max-width: 32%;
+        }
+
         @include respond(phone) {
             display: none;
         }
@@ -1105,6 +1213,10 @@ background-size:contain;
         & img {
             flex: 0 0 20.5%;
             margin: 2rem;
+
+            @include respond(tab-port2) {
+                margin-right: 1.4rem;
+            }
         }
 
         & h3 {
@@ -1112,6 +1224,10 @@ background-size:contain;
             font-size: 1.8rem;
             margin-top: 4rem;
             margin-right: 4rem;
+
+            @include respond(tab-port) {
+                margin-right: 2rem;
+            }
         }
     }
     &__reviews-text {
@@ -1139,9 +1255,17 @@ background-size:contain;
         transform: translateY(-50%);
         box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3);
 
+        @include respond (tab-port) {
+            width: 86%;
+        }
+
         & span {
             flex: 0 0 12%;
             margin-top: 1rem;
+
+            @include respond (tab-port) {
+                margin-top: 0.6rem;
+            }
 
             &.vector {
                 flex: 0 0 1%;
@@ -1176,6 +1300,10 @@ background-size:contain;
     background-position: center;
     min-height: 85rem;
 
+    @include respond(tab-port) {
+        min-height: 80rem;
+    }
+
     &__questions-wrapper {
         position: relative;
         margin: auto;
@@ -1183,7 +1311,7 @@ background-size:contain;
         height: 84.5%;
 
         @include respond(tab-land) {
-            width: 78%;
+            width: 76%;
         }
     }
 
@@ -1198,9 +1326,13 @@ background-size:contain;
         left: 50%;
         transform: translate(-50%, -50%);
 
+        @include respond(tab-port) {
+            height: 58%;
+        }
+
         & h2 {
             position: relative;
-            width: 51%;
+            width: 80%;
             margin: 0 auto;
             margin-top: 3.5rem;
             color: $color-white;
@@ -1208,9 +1340,10 @@ background-size:contain;
             font-size: 2rem;
             text-transform: uppercase;
             margin-bottom: 3.6rem;
+            text-align: center;
 
             @include respond(tab-land) {
-                width: 53%;
+                width: 80%;
             }
 
         }
@@ -1289,11 +1422,11 @@ background-size:contain;
         &__submit {
             flex: 0 0 27%;
             background-color: $color-yellow;
-            width: 30%;
             margin: 0 auto;
             text-align: center;
             display: block;
             height: 5rem;
+
     
             & button {
                 height: 5rem;
@@ -1393,6 +1526,10 @@ background-size:contain;
                 padding-bottom: 0.4rem;
                 color: $color-yellow;
 
+                @include respond(tab-port2) {
+                    font-size: 1.8rem;
+                }
+
                 &:last-child {
                     margin-top: 2rem;
 
@@ -1419,6 +1556,16 @@ background-size:contain;
         max-width: 95rem;
         max-height: 40rem;
         background-image: url('../../img/map.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include respond(tab-port) {
+            top: 50%;
+        }
+
+        @include respond(tab-port2) {
+            top: 52%;
+        }
 
         @include respond(phone) {
             width: 100%;

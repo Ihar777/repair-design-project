@@ -22,6 +22,11 @@
             padding-right: 1.6rem;
         }
 
+        @include respond (tab-port) {
+            flex: 0 0 40%;
+            font-size: 1.5rem;
+        }
+
         @include respond(phone) {
             flex: 0 0 50%;
         }
@@ -37,6 +42,10 @@
             right: 22rem;
         }
 
+        @include respond (tab-port) {
+            right: 40%;
+        }
+
         @include respond(phone) {
             flex: 0 0 50%;
         }
@@ -45,6 +54,10 @@
     &__tel a {
         font-size: 1.4rem;
         color: $color-yellow;
+
+        @include respond (tab-port) {
+            font-size: 1.8rem;
+        }
     }
 
     &__request-call {
@@ -56,6 +69,11 @@
         
         @include respond (tab-land) {
             right: 4rem;
+        }
+
+        @include respond (tab-port) {
+            right: 8rem;
+            height: 16rem;
         }
 
         @include respond(phone) {
@@ -75,19 +93,19 @@
         }
     }
 
-
-
-
-
     &__navigation {
         flex: 0 0 40%;
         padding-top: 3rem;
         height: 8.3rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
         
         
         @include respond(phone) {
             display: none;
-            outline: none;
+            // outline: none;
         }
     }
 
@@ -165,6 +183,11 @@
                 left: -1rem;
             }
 
+            @include respond(tab-port) {
+                font-size: 2rem;
+                left: -3rem;
+            }
+
             &:after {
                 content: url(../../img/vector.svg); 
                 font-size: 100%;
@@ -172,7 +195,7 @@
                 position: absolute;
                 transform: rotate(90deg);
                 top: -2rem;
-                left: 12rem;
+                left: 15rem;
 
                 @include respond(tab-land) {
                     top: -2.4rem;
@@ -259,6 +282,10 @@
         top: 100%;
         height: 9.7rem;
         width: 17.2%;
+
+        @include respond (tab-port) {
+            display: none;
+        }
 
         & span {
             position: relative;

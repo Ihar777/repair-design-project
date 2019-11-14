@@ -1,3 +1,127 @@
+// .footer {
+//     position: relative;
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     background-color: #131313;
+
+//     &__name {
+//         padding: 3rem;
+//         padding-left: 8.2rem;
+//         height: 8rem;
+//         flex: 0 0 25%;
+//         color: $color-yellow;
+//         font-size: 1.2rem;
+//         font-family: FuturaDemic;
+
+//         @include respond (tab-land) {
+//             padding-left: 6rem;
+//             padding-right: 1.6rem;
+//         }
+
+//         @include respond(phone) {
+//             flex: 0 0 50%;
+//         }
+//     }
+
+//     &__tel {
+//         position: absolute;
+//         top: 2.8rem;
+//         right: 32rem;
+//         flex: 0 0 15%;  
+        
+//         @include respond(tab-land) {
+//             right: 22rem;
+//         }
+
+//         @include respond(phone) {
+//             flex: 0 0 50%;
+//         }
+//     }
+
+//     &__tel a {
+//         font-size: 1.4rem;
+//         color: $color-yellow;
+//     }
+
+//     &__request-call {
+//         position: absolute;
+//         top: 2rem;
+//         right: 10rem;
+//         height: 8rem;
+//         flex: 0 0 20%;
+        
+//         @include respond (tab-land) {
+//             right: 4rem;
+//         }
+
+//         @include respond(phone) {
+//             display: none;
+//             outline: none;
+//         }
+
+//         &:hover {
+//             transform: translateY(-3px);
+//             box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+//         }
+
+//         &:active, &:focus {
+//             outline: none;
+//             transform: translateY(-1px);
+//             box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+//         }
+//     }
+
+//     &__navigation {
+//         flex: 0 0 40%;
+//         padding-top: 3rem;
+//         height: 8.3rem;
+        
+        
+//         @include respond(phone) {
+//             display: none;
+//             outline: none;
+//         }
+//     }
+
+//     &__navigation-list {
+//         display: flex; 
+//         flex: 0 0 100%; 
+//         justify-content: space-around;
+//     }
+
+//     &__navigation-item {
+//         flex: 0 0 auto;
+//         display: inline-block;
+//         letter-spacing: 1px;
+//     }
+
+//     &__navigation-link:hover, &__navigation-link:active {
+//             color: $color-primary-light;
+//             box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+//             transform: rotate(5deg) scale(1.3);
+//     }
+
+//     &__navigation-item:first-child  &__navigation-link {
+//         color: $color-yellow;
+//     }
+
+//     &__navigation-item:first-child  &__navigation-link:hover {
+//         color: $color-primary-light;
+//     }
+
+//     &__navigation-link {
+//         text-decoration: none;
+//         font-family: FuturaBookC;
+//         text-transform: uppercase;
+//         font-size: 1rem;
+//         color: $color-white;
+//         display: inline-block;
+//         transition: .4s;
+//     }
+// }
+
 .footer {
     position: relative;
     width: 100%;
@@ -20,6 +144,11 @@
             padding-right: 1.6rem;
         }
 
+        @include respond (tab-port) {
+            flex: 0 0 40%;
+            font-size: 1.5rem;
+        }
+
         @include respond(phone) {
             flex: 0 0 50%;
         }
@@ -35,6 +164,10 @@
             right: 22rem;
         }
 
+        @include respond (tab-port) {
+            right: 40%;
+        }
+
         @include respond(phone) {
             flex: 0 0 50%;
         }
@@ -43,6 +176,10 @@
     &__tel a {
         font-size: 1.4rem;
         color: $color-yellow;
+
+        @include respond (tab-port) {
+            font-size: 1.8rem;
+        }
     }
 
     &__request-call {
@@ -54,6 +191,11 @@
         
         @include respond (tab-land) {
             right: 4rem;
+        }
+
+        @include respond (tab-port) {
+            right: 8rem;
+            height: 16rem;
         }
 
         @include respond(phone) {
@@ -77,11 +219,15 @@
         flex: 0 0 40%;
         padding-top: 3rem;
         height: 8.3rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
         
         
         @include respond(phone) {
             display: none;
-            outline: none;
+            // outline: none;
         }
     }
 
@@ -98,27 +244,27 @@
     }
 
     &__navigation-link:hover, &__navigation-link:active {
-            color: $color-primary-light;
-            box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
-            transform: rotate(5deg) scale(1.3);
-    }
-
-    &__navigation-item:first-child  &__navigation-link {
-        color: $color-yellow;
-    }
-
-    &__navigation-item:first-child  &__navigation-link:hover {
         color: $color-primary-light;
-    }
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+        transform: rotate(5deg) scale(1.3);
+}
 
-    &__navigation-link {
-        text-decoration: none;
-        font-family: FuturaBookC;
-        text-transform: uppercase;
-        font-size: 1rem;
-        color: $color-white;
-        display: inline-block;
-        transition: .4s;
-    }
+&__navigation-item:first-child  &__navigation-link {
+    color: $color-yellow;
+}
+
+&__navigation-item:first-child  &__navigation-link:hover {
+    color: $color-primary-light;
+}
+
+&__navigation-link {
+    text-decoration: none;
+    font-family: FuturaBookC;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: $color-white;
+    display: inline-block;
+    transition: .4s;
+}
 }
 

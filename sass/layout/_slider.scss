@@ -1,6 +1,5 @@
 .section-slider {
     background-color: $color-grey-dark;
-    //height: 96rem;
     padding-bottom: 25rem;
 
     &__top {
@@ -22,6 +21,10 @@
         @include respond(tab-land) {
             height: 5rem;
             padding-top: 2rem;
+        }
+
+        @include respond(tab-port) {
+            display: none;
         }
 
         @include respond(phone) {
@@ -74,14 +77,24 @@
     &__main {
         display: flex;
         flex-direction: row;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
     }
 
     &__left {
+        position: relative;
         flex: 0 0 42%;
         display: flex;
         flex-wrap: wrap;
         padding-left: 6%;
         padding-right: 4%;
+
+        @include respond(tab-port) {
+            padding-left: 20%;
+        }
+
     }
 
     &__heading {
@@ -91,17 +104,36 @@
         font-size: 2rem;
         text-transform: uppercase;
 
+
+        @include respond(tab-port) {
+            position: absolute;
+            left: 30%;
+            flex: 0 0 100%;
+            order: 0;
+        }
+
         & h2 {
             display: inline-block;
 
             @include respond(tab-land) {
                 font-size: 1.9rem;
             }
+
+            & br {
+                @include respond(tab-port) {
+                    display: none;
+                }
+            }
         }
 
         & img {
             display: inline-block;
             padding-bottom: 1rem;
+
+            @include respond(tab-port) {
+                padding-bottom: 0.6rem;
+                padding-left: 2rem;
+            }
         }
     }
 
@@ -123,6 +155,13 @@
         @include respond(tab-land) {
             margin: 2rem 0;
         }
+
+        @include respond(tab-port) {
+            flex: 0 0 100%;
+            order: 1;
+            margin: 3rem 0;
+            margin-left: 10%;
+        }
     }
 
     &__city, 
@@ -137,6 +176,61 @@
 
         @include respond(tab-land) {
             margin-bottom: 1rem;
+        }
+    }
+
+    &__city {
+        @include respond(tab-port) {
+
+            position: absolute;
+            top: 530%;
+
+        }
+
+        @include respond(tab-port2) {
+            top: 478%;
+        }
+    }
+
+    &__area {
+
+        @include respond(tab-port) {
+
+            position: absolute;
+            top: 530%;
+            left: 50%;
+
+        }
+
+        @include respond(tab-port2) {
+            top: 478%;
+        }
+    }
+
+    &__time {
+        @include respond(tab-port) {
+
+            position: absolute;
+            top: 590%;
+
+        }
+
+        @include respond(tab-port2) {
+            top: 538%;
+        }
+    }
+
+    &__cost {
+        @include respond(tab-port) {
+
+            position: absolute;
+            top: 590%;
+            left: 50%;
+
+        }
+
+        @include respond(tab-port2) {
+            top: 538%;
         }
     }
 
@@ -158,6 +252,10 @@
         @include respond(tab-land) {
             margin-top: 1rem;
         }
+
+        @include respond(tab-port) {
+            display: none;
+        }
   
 
         & img {
@@ -176,7 +274,6 @@
         display: flex;
         flex-direction: row;
         overflow: hidden;
-        //max-height: 48rem;
 
         & img {
             position: relative;         
@@ -196,11 +293,31 @@
             height: auto;
         }
 
+        & img:nth-child(3) {
+
+            display: none; 
+
+            @include respond(tab-port) {
+            display: inline-block;
+            height: 7rem;
+            position: absolute;
+            left: 2.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            }
+        }
+
         & img:last-child {
             position: absolute;
             right: 2.8rem;
             top: 50%;
             transform: translateY(-50%);
+        }
+
+        @include respond(tab-port) {
+            display: flex;
+            flex: 0 0 100%;
+            order: 2;
         }
     }
 
@@ -214,6 +331,10 @@
 
         @include respond(tab-land) {
             margin-top: 6rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 26rem;
         }
 
         & h2 {
@@ -235,6 +356,10 @@
         & [src$="dash.jpg"] {
             display: inline-block;
             margin-bottom: 1.2rem;
+        }
+
+        @include respond(tab-port) {
+            width: 40%;
         }
     }
 }

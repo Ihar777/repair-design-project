@@ -3,19 +3,91 @@
         @media only screen and (max-width: 23.44em) { @content }; // 375px
     }
 
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 79em) { @content }; // 1260px
+    @if $breakpoint == phone-land {
+        @media only screen and (max-width: 43.75em) { @content }; // 700px
+    }
+
+    @if $breakpoint == tab-port2 {
+        @media only screen and (max-width: 50em) { @content }; // 800px
     }
 
     @if $breakpoint == tab-port {
         @media only screen and (max-width: 56.25em) { @content }; // 900px
     }
 
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 79em) { @content }; // 1260px
+    }
+
     @if $breakpoint == desktop {
         @media only screen and (max-width: 90em) { @content }; // 1440px
     }
    
-} 
+}
+
+@mixin price {
+    &__price {
+        width: 69%;
+        height: 5.4rem;
+        background-color: $color-yellow;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translateY(-50%);
+        box-shadow: 0.5rem 0.5rem 1rem rgba(227, 184, 115, 0.3);
+
+        @include respond(tab-land) {
+            height: 5rem;
+        }
+        
+        @include respond (tab-port) {
+                width: 80%;
+        }
+
+        @include respond(tab-port2) {
+            height: 4rem;
+        }
+       
+        & h3 {
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: YesevaOne;
+            font-size: 1.8rem;
+            line-height: 3.8rem;
+            text-align: center;
+
+            @include respond(tab-land) {
+                font-size: 1.6rem;
+                line-height: 3rem;
+            }
+
+            @include respond(tab-port2) {
+               line-height: 2.4rem;
+            }
+        }
+    }
+}
+
+@mixin heading-logo {
+    &__tools {
+        margin: 0 auto;
+        width: 14.8%;
+        text-align: center;
+
+        & img {
+            margin-right: 0.4rem;
+        }
+
+        & [src$="dash.jpg"] {
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
+
+        @include respond(tab-port) {
+            width: 40%;
+        }
+    }
+}
 
 
 
