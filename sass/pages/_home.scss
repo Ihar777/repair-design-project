@@ -6,8 +6,10 @@ section {
 
 .section-control {
 
-    @include respond(tab-land) {
-        min-height: 66rem;
+    @include respond(phone-sm) {
+        background-color: $color-grey-dark;
+        color: $color-white;
+        min-height: 60rem;
     }
 
     &__video-container {
@@ -21,6 +23,10 @@ section {
         max-width: 81.7rem;
         max-height: 43.4rem;
         overflow: hidden;
+
+        @include respond (phone-sm) {
+            width: 90%;
+        }
     }
     
     &__video {
@@ -59,16 +65,34 @@ section {
             top: 50%;
         }
 
+        @include respond (phone-sm) {
+            top: 76%;
+            width: 90%;
+            color: $color-white;
+            padding-bottom: 22rem;
+        }
+
         & ul {
             list-style: none;
+            @include respond (phone-sm) {
+                text-align: center;
+            }
         }
 
         & li {
             text-align: center;
+
+            @include respond (phone-sm) {
+                display: inline;
+            }
         }
 
         & li:first-child {
             padding-bottom: 3rem;
+            @include respond (phone-sm) {
+                display: block;
+                padding-bottom: 1.4rem;
+            }
         }
     }
 
@@ -84,6 +108,19 @@ section {
             top: 72%;
         }
 
+        @include respond(phone) {
+            left: 55%;
+        }
+
+        @include respond(phone-sm) {
+            top: 80%;
+            flex-direction: column;
+            width: 90%;
+            left: 50%;
+        }
+
+        
+
     }
 
     &__name,
@@ -92,6 +129,12 @@ section {
         display: flex;
         flex-direction: column;
         font-family: FuturaBookC;
+
+        @include respond(phone-sm) {
+            color: $color-white;
+            margin-bottom: 4rem;
+            padding-left: 5%;
+        }
 
         & label {
             flex: 0 0 20%;
@@ -105,6 +148,12 @@ section {
             font-size: 1.8rem;
             flex: 0 0 80%;
             line-height: 1rem;
+
+
+        @include respond(phone-sm) {
+            background-color: $color-grey-dark;
+            color: $color-white;
+        }
         }
 
         &:after {
@@ -116,7 +165,18 @@ section {
             opacity: 0.7;
             margin: 0 auto;
             margin-right: 4rem;
+
+            @include respond(phone) {
+                width: 20rem;
+            }
+
+            @include respond(phone-sm) {
+                width: 95%;
+                color: $color-white;
+                opacity: 1;
+            }
         }
+
     }
 
     &__submit {
@@ -126,6 +186,15 @@ section {
         display: block;
         height: 5rem;
 
+        @include respond(phone-sm) {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 90%;
+            transform: translate(0%, 50%);
+            text-align: center;
+        }
+
         & button {
             height: 5rem;
             width: 20.1rem;
@@ -134,6 +203,11 @@ section {
             color: $color-white;
             font-family: FuturaDemiC;
             font-size: 1.5rem;
+
+            @include respond(phone-sm) {
+                text-align: center;
+                width: 100%;
+            }
         }
     }
 
@@ -150,6 +224,12 @@ section {
 
         @include respond(tab-land) {
             top: 88%;
+        }
+
+        @include respond(phone-sm) {
+            top: 90%;
+            left: 0;
+            transform: translate(20%, 0%);
         }
 
         & input {
@@ -198,11 +278,26 @@ section {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
+
+        @include respond(tab-land) {
+            left: 6px;
+            top: 3px;
+        }
+
+        @include respond(tab-port2) {
+            left: 4px;
+            top: 2px;
+        }
+
       }
 }
 
 .section-repair {
     padding: 0 3.8%;
+
+    @include respond(phone-sm) {
+        padding-top: 8rem;
+    }
 
     &__types {
         display: flex;
@@ -214,6 +309,9 @@ section {
 
         @include respond(phone) {
             flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-between;
         }
     }
 
@@ -228,6 +326,7 @@ section {
 
         @include respond(phone) {
             flex: 0 0 100%;
+            margin-bottom: 12rem;
         }
     }
 
@@ -242,6 +341,7 @@ section {
 
         @include respond(phone) {
             flex: 0 0 100%;
+            margin-bottom: 12rem;
         }
     }
 
@@ -255,7 +355,7 @@ section {
 
         @include respond(phone) {
             flex: 0 0 100%;
-            
+            margin-bottom: 0rem;
         }
     }
     &__description {
@@ -276,6 +376,11 @@ section {
         @include respond(tab-port2) {
             top: 80%;
             height: 30rem;
+        }
+
+        @include respond(phone) {
+            left: 0%;
+            transform: translate(0%, -50%);
         }
 
         & h3 {
@@ -311,7 +416,6 @@ section {
     }
 
     &__control {
-       // margin-top: 9rem;
         margin-bottom: 2rem;
         color: $color-white;
         font-family: YesevaOne;
@@ -320,49 +424,85 @@ section {
 
         & h2 {
             margin: 0 auto;
-            width: 14.8%;
+            width: 80%;
             text-align: center;
         }
     }
 
     @include heading-logo;
 
-    // &__tools {
-    //     margin: 0 auto;
-    //     width: 14.8%;
-    //     text-align: center;
-
-    //     & img {
-    //         margin-right: 0.4rem;
-    //     }
-
-    //     & [src$="dash.jpg"] {
-    //         display: inline-block;
-    //         margin-bottom: 1.2rem;
-    //     }
-
-    //     @include respond(tab-port) {
-    //         width: 40%;
-    //     }
-    // }
-
 }
 
 
 .section-samples {
-    background: url(../../img/bg_samples.jpg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position:cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 8rem;
-
+        background: url(../../img/bg_samples.jpg);
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8rem;
+                                    
     @include respond(tab-land) {
        margin-top: 6rem;
        min-height: 60rem;
     }
+
+    & * {
+        @include respond(phone) {
+            visibility: hidden;
+            
+        }
+    }
+
+        &__arrows {
+            visibility: hidden;
+        }
+             
+
+                &__arrows img:nth-child(1) {
+            
+                    @include respond(phone) {
+                    display: inline-block;
+                    visibility: visible;
+                    height: 7rem;
+                    position: absolute;
+                    left: 3.8rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &:hover, &:active {
+                        cursor: pointer;
+                        transform: translateY(-50%) scale(1.2);
+                    }
+                    }
+                    
+                }
+            
+                &__arrows img:nth-child(2) {
+                    @include respond(phone) {
+                    display: inline-block;
+                    visibility: visible;
+                    position: absolute;
+                    right: 2.8rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 999;
+
+                    &:hover, &:active {
+                        cursor: pointer;
+                        transform: translateY(-50%) scale(1.2);
+                    }
+
+                    }
+                }
+
+        @include respond(phone) {
+            background-image: url('../../img/light-bg.png');
+            background-position: center;
+            background-size: 90vw;
+            background-repeat: no-repeat;
+        }
+   
 
     & h2 {
         text-transform: uppercase;
@@ -395,6 +535,11 @@ section {
             padding-left: 4rem;
         }
 
+        @include respond(phone) {
+            display: none;
+            
+        }
+
         & ul {
             list-style: none;
             min-height: 52rem;
@@ -423,6 +568,10 @@ section {
         position: relative;
         display: flex;
         flex-direction: column;
+
+        @include respond(phone) {
+            display: none;   
+        }
 
         &--first {
             flex: 1 1 24.5%;
@@ -467,8 +616,22 @@ section {
         margin-top: 6rem;
     }
 
+    @include respond(phone) {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        margin-top: 0rem;
+        background-color: #131313;
+        color: $color-white;
+    }
+
     &__heading {
-        flex: 0 0 100%;     
+        flex: 0 0 100%;  
+        
+        @include respond(phone) {
+            padding-top: 2rem;
+        }
     }
 
     &__control {
@@ -477,34 +640,21 @@ section {
          font-family: YesevaOne;
          font-size: 1.4rem;
          text-transform: uppercase;
+         
  
          & h2 {
              margin: 0 auto;
-             width: 14.8%;
+             width: 80%;
              text-align: center;
+             color: $color-black;
+
+             @include respond(phone) {
+                 color: $color-white;
+             }
          }
      }
 
      @include heading-logo;
- 
-    //  &__tools {
-    //      margin: 0 auto;
-    //      width: 14.8%;
-    //      text-align: center;
-
-    //      @include respond (tab-port) {
-    //          width: 40%;
-    //      }
- 
-    //      & img {
-    //          margin-right: 0.4rem;
-    //      }
-
-    //      & [src$="dash.jpg"] {
-    //          display: inline-block;
-    //          margin-bottom: 1.2rem;
-    //      }
-    //  }
 
     &__text {
         width: 76rem;
@@ -523,6 +673,10 @@ section {
             }
             
         }
+
+        @include respond(phone) {
+            width: 90%;
+        }
     }
     
     &__mini {
@@ -539,8 +693,11 @@ section {
         @include respond(tab-land) {
             transform: translateY(20%);
         }
+
         @include respond(phone) {
             flex: 0 0 100%;
+            margin: 0 auto;
+            margin-bottom: 20rem;
         }
     }
 
@@ -561,6 +718,8 @@ section {
 
         @include respond(phone) {
             flex: 0 0 100%;
+            margin: 0 auto;
+            margin-bottom: 20rem;
         }
     }
 
@@ -581,6 +740,8 @@ section {
 
         @include respond(phone) {
             flex: 0 0 100%;
+            margin: 0 auto;
+            margin-bottom: 50rem;
         }
     }
 
@@ -604,6 +765,13 @@ section {
             top: 48%;
         }
 
+        @include respond(phone) {
+            top: 68%;
+            left: 0%;
+            transform: translate(0%, 0%);
+            width: 79.4%;
+        }
+
         &--mini {
             max-height: 23.7rem;
         }
@@ -621,6 +789,10 @@ section {
             font-size: 1.8rem;
             font-family: YesevaOne;
             margin: 1rem 0;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
         }
 
         & li {
@@ -628,6 +800,11 @@ section {
             font-size: 1.5rem;
             line-height: 1.6;
             color: $color-grey-dark-3;
+
+            @include respond(phone) {
+                font-size: 1.8rem;
+                line-height: 1.5;
+            }
         }
     }
 
@@ -831,9 +1008,13 @@ section {
 
 .section-team {
     position: relative;
-    background-color: $color-grey-light-1;
     display: flex;
     min-height: 90rem;
+
+    @include respond(phone) {
+        min-height: 250rem;
+        background-color: #131313;
+    }
 
     &__heading {
         flex: 0 0 100%;  
@@ -850,12 +1031,12 @@ section {
 
          @include respond(tab-land) {
             padding-top: 4rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         } 
  
          & h2 {
              margin: 0 auto;
-             width: 14.8%;
+             width: 80%;
              text-align: center;
              font-family: YesevaOne;
              font-size: 2rem;
@@ -863,25 +1044,6 @@ section {
      }
 
      @include heading-logo;
- 
-    //  &__tools {
-    //      margin: 0 auto;
-    //      width: 14.8%;
-    //      text-align: center;
-
-    //      @include respond (tab-port) {
-    //          width: 40%;
-    //      }
- 
-    //      & img {
-    //          margin-right: 0.4rem;
-    //      }
-
-    //      & [src$="dash.jpg"] {
-    //          display: inline-block;
-    //          margin-bottom: 1.2rem;
-    //      }
-    //  }
 
     &__text {
         width: 100%;
@@ -905,6 +1067,7 @@ section {
             @include respond(tab-land) {
                 padding-bottom: 28rem;
             }
+
         }
     }
 
@@ -929,6 +1092,11 @@ section {
         @include respond(tab-port2) {
             transform: translate(+9%, +100%);
         }
+
+        @include respond(phone) {
+            flex-direction: column;
+            transform: translate(+9%, +14%);
+        }
     }
 
     &__profile {
@@ -936,12 +1104,22 @@ section {
         flex: 1 1 18.9%;
         max-height: 35.7rem;
 
+        @include respond(phone) {
+            flex: 0 0 100%;
+            margin: 0 auto;
+            max-width: 303px;
+            margin-bottom: 28rem;
+        }
         img:nth-child(2) {
             width: 100%;
         }
 
         &:not(:first-child) {
             margin-left: 8%;
+
+            @include respond(phone) {
+                margin-left: auto;
+            }
         }
 
         img:first-child {
@@ -959,9 +1137,7 @@ section {
                 } 
         }
 
-        @include respond(phone) {
-            flex: 0 0 100%;
-        }
+      
     }
 
     &__profile:nth-child(even) {
@@ -994,6 +1170,12 @@ section {
             padding-top: 0.6rem;
             } 
 
+            @include respond(phone) {
+                width: 77%;
+                top: 100%;
+                transform: translate(-50%, 40%);
+            }
+
         & * {
             display: inline-block;
             text-align: center;
@@ -1017,6 +1199,10 @@ section {
                 font-size: 2.4rem;
                 padding: 0 2rem;
                 } 
+            
+                @include respond(phone) {
+                    padding: 0 1rem;
+                    } 
         }
 
         & span {
@@ -1044,6 +1230,22 @@ section {
             width: 100%;
             flex: 0 0 100%;
 
+            & br {
+                display: none;
+            }
+
+            & br {
+                @include respond(tab-land) {
+                    display: inline-block;
+                }
+            }
+
+            & br {
+                @include respond(phone) {
+                    display: none;
+                }
+            }
+
             @include respond(tab-land) {
                 padding-bottom: 1rem;
                 font-size: 1.6rem;
@@ -1070,6 +1272,10 @@ section {
         font-family: FuturaBookC;
         color: $color-grey-dark-2;
         font-size: 2rem;
+
+        @include respond(phone) {
+           display: none;
+        }
 
         & ul {
             list-style: none;
@@ -1107,6 +1313,10 @@ section {
         padding-bottom: 28rem;
     }
 
+    @include respond(phone) {
+        display: none;
+    }
+
     &__heading {
         flex: 0 0 100%;   
         margin-bottom: 6rem;
@@ -1131,25 +1341,6 @@ section {
      }
 
      @include heading-logo;
- 
-    //  &__tools {
-    //      margin: 0 auto;
-    //      width: 14.8%;
-    //      text-align: center;
- 
-    //      & img {
-    //          margin-right: 0.4rem;
-    //      }
-
-    //      & [src$="dash.jpg"] {
-    //          display: inline-block;
-    //          margin-bottom: 1.2rem;
-    //      }
-
-    //      @include respond(tab-port) {
-    //          width: 40%;
-    //      }
-    //  }
 
     &__text {
         width: 76rem;
@@ -1304,6 +1495,11 @@ section {
         min-height: 80rem;
     }
 
+    @include respond(phone) {
+        background-image: linear-gradient(#131313, #131313);
+        min-height: 80rem;
+    }
+
     &__questions-wrapper {
         position: relative;
         margin: auto;
@@ -1312,6 +1508,10 @@ section {
 
         @include respond(tab-land) {
             width: 76%;
+        }
+
+        @include respond(phone) {
+            width: 90%;
         }
     }
 
@@ -1328,6 +1528,10 @@ section {
 
         @include respond(tab-port) {
             height: 58%;
+        }
+
+        @include respond(phone) {
+            background-color: #131313;
         }
 
         & h2 {
@@ -1353,6 +1557,10 @@ section {
             justify-content: space-between;
             flex-direction: row;
             flex-wrap: wrap;
+
+            @include respond(phone) {
+                flex-direction: column;
+            }
         }
     
         &__name,
@@ -1389,6 +1597,10 @@ section {
                 font-family: FuturaBookC;
                 font-size: 1.8rem;
                 background-color: $color-black;
+
+                @include respond(phone) {
+                    background-color: #131313;
+                }
             }
     
             &:after {
@@ -1427,6 +1639,10 @@ section {
             display: block;
             height: 5rem;
 
+            @include respond(phone) {
+                width: 100%;
+            }
+
     
             & button {
                 height: 5rem;
@@ -1436,6 +1652,10 @@ section {
                 color: $color-white;
                 font-family: FuturaDemiC;
                 font-size: 1.5rem;
+
+                @include respond(phone) {
+                    margin: 0 auto;
+                }
 
                 &:hover,
                 &:active {
@@ -1515,6 +1735,23 @@ section {
             width: 58%;
         }
 
+        @include respond(phone) {
+            position: absolute;
+            top: 83%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @include respond(phone-sm) {
+            top: 76%
+        }
+
+        @include respond(phone-smaller) {
+            top: 65%
+        }
+
+        
+
         & ul {
             list-style-type: none;
              
@@ -1568,7 +1805,8 @@ section {
         }
 
         @include respond(phone) {
-            width: 100%;
+            width: 90%;
+            top: 34%;
         }
     }
 }

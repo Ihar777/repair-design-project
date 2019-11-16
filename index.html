@@ -12,18 +12,18 @@
     </head>
     <body>
         <div class="container">
-        <header class="header">
+        <header class="header" id="home">
             <div class="header__name">
                 IC "REPAIR DESIGN PROJECT"
             </div>
             <nav class="header__navigation">
                 <ul class="header__navigation-list">
                         <li class="header__navigation-item"><a href="#" class="header__navigation-link">Home</a></li>
-                        <li class="header__navigation-item"><a href="#" class="header__navigation-link">Projects</a></li>
-                        <li class="header__navigation-item"><a href="#" class="header__navigation-link">Measurement</a></li>
-                        <li class="header__navigation-item"><a href="#" class="header__navigation-link">Team</a></li>
-                        <li class="header__navigation-item"><a href="#" class="header__navigation-link">Reviews</a></li>
-                        <li class="header__navigation-item"><a href="#" class="header__navigation-link">Contacts</a></li> 
+                        <li class="header__navigation-item"><a href="#projects" class="header__navigation-link">Projects</a></li>
+                        <li class="header__navigation-item"><a href="#steps" class="header__navigation-link">Measurement</a></li>
+                        <li class="header__navigation-item"><a href="#team" class="header__navigation-link">Team</a></li>
+                        <li class="header__navigation-item"><a href="#reviews" class="header__navigation-link">Reviews</a></li>
+                        <li class="header__navigation-item"><a href="#contacts" class="header__navigation-link">Contacts</a></li> 
                 </ul>
             </nav>
 
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="header__scroll">
-                            <span>scroll down <a href="#"><img src="img/scroll.svg" alt="scroll"></a></span>
+                            <span>scroll down <a href="#examples"><img src="img/scroll.svg" alt="scroll"></a></span>
                             
                     </div>
 
@@ -71,7 +71,7 @@
         </header>
 
         <main>
-            <section class="section-slider">
+            <section class="section-slider" id="projects">
                 <div class="section-slider__top">
                     <div class="section-slider__aside">
                     </div>
@@ -98,23 +98,24 @@
                                 <li>market we have made happy more than 1000 families</li>
                             </ul>
                         </div>
-                        <div class="section-slider__city">
-                            <h3>city:</h3>
-                            Rostov-on_don <br>
-                            LCD admiral
-                        </div>
-                        <div class="section-slider__area">
-                            <h3>apartment area:</h3>
-                            81.2 m2
-                        </div>
-                        <div class="section-slider__time">
-                            <h3>repair time:</h3>
-                            3.5months
-                        </div>
-                        <div class="section-slider__cost">
-                            <h3>repair cost:</h3>
-                            Upon request
-                        </div>
+
+                            <div class="section-slider__city">
+                                    <h3>city:</h3>
+                                    Rostov-on_don <br>
+                                    LCD admiral
+                                </div>
+                                <div class="section-slider__area">
+                                    <h3>apartment area:</h3>
+                                    81.2 m2
+                                </div>
+                                <div class="section-slider__time">
+                                    <h3>repair time:</h3>
+                                    3.5months
+                                </div>
+                                <div class="section-slider__cost">
+                                    <h3>repair cost:</h3>
+                                    Upon request
+                                </div>
 
                         <div class="section-slider__arrows">
                             <img src="/img/arrow_left.png" alt="left arrow">
@@ -263,17 +264,12 @@
                 </div>
             </div>
             </section>
-            <!--
-            <section class="section-procedure">
-                <div class="section-procedure__stages">
-
-                </div>
-                <div class="section-procedure__request">
-
-                </div>
-            </section>
-            -->
-            <section class="section-samples">
+  
+            <section class="section-samples" id="examples">
+                    <div class="section-samples__arrows">
+                    <img src="img/slider_left.png" alt="pointer">
+                    <img src="/img/slider_ellipse.png" alt="pointer">
+                    </div>
                 <div class="section-samples__text">
                     <h2>we realize your wildest fantasies</h2>
                     <ul>
@@ -305,7 +301,7 @@
             <section class="section-design-project">
                 <div class="section-design-project__heading">
                         <div class="section-design-project__control">
-                                <h2 style="color: black;">design project</h2> 
+                                <h2>design project</h2> 
                             </div>
                             <div class="section-design-project__tools">
                                 <img src="/img/surveillance_dash.jpg" alt="dash">
@@ -384,7 +380,7 @@
             </section>
             <section class="section-steps">
                 <div class="section-steps__step">
-                        <div class="section-steps__goal">
+                        <div class="section-steps__goal" id="steps">
                             <h5>how we are working</h5>
                             <h2>
                                 <span>6 steps to</span><br>
@@ -460,7 +456,7 @@
                 </div>
 
             </section>
-            <section class="section-team">
+            <section class="section-team" id="team">
                 <div class="section-team__profile-set">
                     <div class="section-team__profile">
                         <img src="img/manager.png" alt="manager">
@@ -468,7 +464,7 @@
                         <div class="section-team__profile-info">
                                 <h3>Dmitry tulyakov</h3>
                                     <span>Project manager</span>                         
-                                  <h4>work experience 8 years</h4>   
+                                  <h4>work experience <br>8 years</h4>   
                         </div>
                     </div>
                     <div class="section-team__profile">
@@ -477,7 +473,7 @@
                         <div class="section-team__profile-info">
                                 <h3>Larisa Kotlyarova</h3>
                                     <span>Designer</span>                         
-                                  <h4>work experience 6 years</h4>   
+                                  <h4>work experience <br>6 years</h4>   
                         </div>
                     </div>
                     <div class="section-team__profile">
@@ -486,7 +482,7 @@
                         <div class="section-team__profile-info">
                                 <h3>Alexey Efimov</h3>
                                     <span>Foreman</span>                         
-                                  <h4>work experience 12 years</h4>   
+                                  <h4>work experience <br>12 years</h4>   
                         </div>
                     </div>
                 </div>
@@ -520,7 +516,7 @@
                         </ul>
                     </div>
                     </section>
-                <section class="section-clients">
+                <section class="section-clients" id="reviews">
                         <div class="section-clients__heading">
                                 <div class="section-clients__control">
                                         <h2>our clients</h2> 
@@ -645,7 +641,7 @@
 
                 </div>
             </div>
-                <div class="section-contacts__contacts">
+                <div class="section-contacts__contacts" id="contacts">
                     <ul>
                         <li>rostov-on-don, nansen st., 239 shopping center</li>
                         <li>decorum tel +7 (928) 768 32 29</li>
@@ -664,12 +660,12 @@
                 </div>
                 <nav class="footer__navigation">
                     <ul class="footer__navigation-list">
-                            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Home</a></li>
-                            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Projects</a></li>
-                            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Measurement</a></li>
-                            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Team</a></li>
-                            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Reviews</a></li>
-                            <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Contacts</a></li> 
+                        <li class="footer__navigation-item"><a href="#" class="footer__navigation-link">Home</a></li>
+                        <li class="footer__navigation-item"><a href="#projects" class="footer__navigation-link">Projects</a></li>
+                        <li class="footer__navigation-item"><a href="#steps" class="footer__navigation-link">Measurement</a></li>
+                        <li class="footer__navigation-item"><a href="#team" class="footer__navigation-link">Team</a></li>
+                        <li class="footer__navigation-item"><a href="#reviews" class="footer__navigation-link">Reviews</a></li>
+                        <li class="footer__navigation-item"><a href="#contacts" class="footer__navigation-link">Contacts</a></li> 
                     </ul>
                 </nav>
     

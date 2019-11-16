@@ -1,11 +1,15 @@
 .section-slider {
     background-color: $color-grey-dark;
     padding-bottom: 25rem;
-
+   
     &__top {
         position: relative;
         display: flex;
         height: 6rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
     }
 
     &__aside {
@@ -91,10 +95,6 @@
         padding-left: 6%;
         padding-right: 4%;
 
-        @include respond(tab-port) {
-            padding-left: 20%;
-        }
-
     }
 
     &__heading {
@@ -107,9 +107,17 @@
 
         @include respond(tab-port) {
             position: absolute;
-            left: 30%;
-            flex: 0 0 100%;
+            left: 40%;
+            flex: 0 0 20%;
             order: 0;
+            margin-top: 2rem;
+        }
+
+        @include respond(phone) {
+            width: 20%;
+            text-align: center;
+            left: 40%;
+            line-height: 1.6;
         }
 
         & h2 {
@@ -131,8 +139,11 @@
             padding-bottom: 1rem;
 
             @include respond(tab-port) {
-                padding-bottom: 0.6rem;
-                padding-left: 2rem;
+                display: none;
+            }
+
+            @include respond(phone) {
+                display: none;
             }
         }
     }
@@ -159,8 +170,13 @@
         @include respond(tab-port) {
             flex: 0 0 100%;
             order: 1;
-            margin: 3rem 0;
-            margin-left: 10%;
+            margin: 4rem 0;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 8rem;
         }
     }
 
@@ -183,12 +199,28 @@
         @include respond(tab-port) {
 
             position: absolute;
-            top: 530%;
+            top: 452%;
 
         }
 
         @include respond(tab-port2) {
-            top: 478%;
+            top: 408%;
+        }
+
+        @include respond(phone) {
+            top: 340%;
+        }
+
+        @include respond(phone-sm) {
+            top: 290%;
+        }
+
+        @include respond(phone-smaller) {
+            top: 246%;
+        }
+
+        @include respond(phone-smallest) {
+            top: 210%;
         }
     }
 
@@ -197,13 +229,29 @@
         @include respond(tab-port) {
 
             position: absolute;
-            top: 530%;
+            top: 452%;
             left: 50%;
 
         }
 
         @include respond(tab-port2) {
-            top: 478%;
+            top: 408%;
+        }
+
+        @include respond(phone) {
+            top: 340%;
+        }
+
+        @include respond(phone-sm) {
+            top: 290%;
+        }
+
+        @include respond(phone-smaller) {
+            top: 246%;
+        }
+
+        @include respond(phone-smallest) {
+            top: 210%;
         }
     }
 
@@ -211,12 +259,28 @@
         @include respond(tab-port) {
 
             position: absolute;
-            top: 590%;
+            top: 510%;
 
         }
 
         @include respond(tab-port2) {
-            top: 538%;
+            top: 460%;
+        }
+
+        @include respond(phone) {
+            top: 386%;
+        }
+
+        @include respond(phone-sm) {
+            top: 328%;
+        }
+
+        @include respond(phone-smaller) {
+            top: 284%;
+        }
+
+        @include respond(phone-smallest) {
+            top: 244%;
         }
     }
 
@@ -224,13 +288,29 @@
         @include respond(tab-port) {
 
             position: absolute;
-            top: 590%;
+            top: 510%;
             left: 50%;
 
         }
 
         @include respond(tab-port2) {
-            top: 538%;
+            top: 460%;
+        }
+
+        @include respond(phone) {
+            top: 386%;
+        }
+
+        @include respond(phone-sm) {
+            top: 328%;
+        }
+
+        @include respond(phone-smaller) {
+           top: 284%;
+        }
+
+        @include respond(phone-smallest) {
+            top: 244%;
         }
     }
 
@@ -275,9 +355,32 @@
         flex-direction: row;
         overflow: hidden;
 
+        @include respond(phone) {
+            background-image: url('../../img/mobile-slider.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
         & img {
             position: relative;         
             display: block;
+
+                @include respond(phone) {
+                    visibility: hidden;
+                }
+
+                &:nth-child(4), &:nth-child(3) {
+                    @include respond(phone) {
+                    visibility: visible;
+                    }
+
+                    &:hover, &:active {
+                        cursor: pointer;
+                        transform: translateY(-50%) scale(1.2);
+                    }
+                }
+            
         }
 
         & img:first-child {
@@ -339,7 +442,7 @@
 
         & h2 {
             margin: 0 auto;
-            width: 14.8%;
+            width: 80%;
             text-align: center;
         }
     }

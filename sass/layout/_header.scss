@@ -30,6 +30,11 @@
         @include respond(phone) {
             flex: 0 0 50%;
         }
+
+        @include respond(phone-smaller) {
+            padding-left: 2rem;
+            flex: 0 0 60%;
+        }
     }
 
     &__tel {
@@ -48,6 +53,11 @@
 
         @include respond(phone) {
             flex: 0 0 50%;
+            right: 2rem;
+        }
+
+        @include respond(phone-smaller) {
+            flex: 0 0 40%;
         }
     }
 
@@ -57,6 +67,10 @@
 
         @include respond (tab-port) {
             font-size: 1.8rem;
+        }
+
+        @include respond(phone) {
+           color: $color-white;
         }
     }
 
@@ -78,7 +92,6 @@
 
         @include respond(phone) {
             display: none;
-            outline: none;
         }
 
         &:hover {
@@ -105,7 +118,6 @@
         
         @include respond(phone) {
             display: none;
-            // outline: none;
         }
     }
 
@@ -163,12 +175,22 @@
         background-size:  cover;
         background-repeat: no-repeat;
         max-height: 75.8rem;
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+            background-position: top;
+        }
     }
 
     &__main-instagram {
         flex: 0 0 5.7%;
         height: auto;
         position: relative;
+
+        @include respond(phone) {
+            display: none;
+        }
+
         & span {
             display: inline-block;
             transform: rotate(90deg);
@@ -218,14 +240,24 @@
 
         &--first {
             display: block;
+            @include respond(phone-smaller) {
+                display: inline;
+            }
         }
 
         &--second {
             display: block;
+            @include respond(phone-smaller) {
+                display: inline;
+            }
         }
 
         &--yellow {
             color: $color-yellow;
+        }
+
+        @include respond(phone-smaller) {
+            font-size: 3.2rem;
         }
     }
 
@@ -241,9 +273,16 @@
 
     &__buttons {
         display: flex;
+        flex-wrap: wrap;
         margin-top: 3.8rem;
         justify-content: space-between;
         width: 85%;
+
+        @include respond (phone-sm) {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+        }
     }
 
     &__buttons .btn--orange {
@@ -252,6 +291,14 @@
         flex: 0 0 45%;
         font-size: 1.2rem;
         transition: 0.4s;
+
+        @include respond (phone-sm) {
+            width: 100%;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 0;
+        }
 
         &:hover, &:active {
             background-color: #cf6d17;
@@ -265,6 +312,13 @@
         flex: 0 0 45%;
         font-size: 1.2rem;
         transition: 0.4s;
+
+        @include respond (phone-sm) {
+            width: 100%;
+            font-size: 1.6rem;
+            padding-bottom: 1rem;
+            border-radius: 0;
+        }
 
         &:hover, &:active {
             background-color: #cf6d17;
