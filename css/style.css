@@ -1586,7 +1586,7 @@ section {
 .section-team {
   position: relative;
   display: flex;
-  min-height: 90rem; }
+  min-height: 94rem; }
   @media only screen and (max-width: 43.75em) {
     .section-team {
       min-height: 250rem;
@@ -1638,7 +1638,7 @@ section {
           font-size: 2rem; }
       @media only screen and (max-width: 79em) {
         .section-team__text ul {
-          padding-bottom: 28rem; } }
+          padding-bottom: 26rem; } }
   .section-team__profile-set {
     display: flex;
     width: 74%;
@@ -1795,7 +1795,7 @@ section {
       padding-bottom: 1rem; }
     @media only screen and (max-width: 79em) {
       .section-team__summary {
-        top: 88%; } }
+        top: 84%; } }
     @media only screen and (max-width: 56.25em) {
       .section-team__summary {
         top: 84%; } }
