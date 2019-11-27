@@ -288,7 +288,7 @@ div {
     flex: 0 0 94.3%;
     display: block;
     height: 100%;
-    background-image: url(../../img/main.png);
+    background-image: url(../img/main.png);
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 75.8rem; }
@@ -320,7 +320,7 @@ div {
           font-size: 2rem;
           left: -3rem; } }
       .header__main-instagram span:after {
-        content: url(../../img/vector.svg);
+        content: url(../img/vector.svg);
         font-size: 100%;
         display: block;
         position: absolute;
@@ -690,7 +690,7 @@ div {
     overflow: hidden; }
     @media only screen and (max-width: 43.75em) {
       .section-slider__right {
-        background-image: url("../../img/mobile-slider.png");
+        background-image: url("../img/mobile-slider.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat; } }
@@ -1141,7 +1141,7 @@ section {
         width: 40%; } }
 
 .section-samples {
-  background: url(../../img/bg_samples.jpg);
+  background: url(../img/bg_samples.jpg);
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
@@ -1182,7 +1182,7 @@ section {
         transform: translateY(-50%) scale(1.2); } }
   @media only screen and (max-width: 43.75em) {
     .section-samples {
-      background-image: url("../../img/light-bg.png");
+      background-image: url("../img/light-bg.png");
       background-position: center;
       background-size: 90vw;
       background-repeat: no-repeat; } }
@@ -1570,7 +1570,7 @@ section {
     height: 100%;
     max-width: 76.5rem;
     margin-left: 1rem;
-    background: url("../../img/img_steps.jpg");
+    background: url("../img/img_steps.jpg");
     background-repeat: no-repeat;
     background-size: contain; }
     @media only screen and (max-width: 56.25em) {
@@ -1945,7 +1945,7 @@ section {
         flex: 0 0 22%; }
 
 .section-contacts {
-  background-image: url("../../img/map_bg.jpg");
+  background-image: url("../img/map_bg.jpg");
   background-size: cover;
   background-position: center;
   min-height: 85rem; }
@@ -2166,7 +2166,7 @@ section {
     height: 55%;
     max-width: 95rem;
     max-height: 40rem;
-    background-image: url("../../img/map.jpg");
+    background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
     background-size: contain; }
     @media only screen and (max-width: 56.25em) {
@@ -2182,16 +2182,16 @@ section {
 
 @font-face {
   font-family: "FuturaDemic";
-  src: url("../../css/fonts/FuturaDemiC.ttf"); }
+  src: url("../css/fonts/FuturaDemiC.ttf"); }
 
 @font-face {
   font-family: "FuturaBookC";
-  src: "../../css/fonts/FuturaBookC Regular.otf"; }
+  src: "../css/fonts/FuturaBookC Regular.otf"; }
 
 @font-face {
   font-family: "YesevaOne";
-  src: "../../css/fonts/YesevaOne.eot"; }
+  src: "../css/fonts/YesevaOne.eot"; }
 
 @font-face {
   font-family: "ProximaNova";
-  src: "../../css/fonts/ProximaNova-Regular.ttf"; }
+  src: "../css/fonts/ProximaNova-Regular.ttf"; }
