@@ -1,37 +1,69 @@
 @mixin respond($breakpoint) {
 
-    @if $breakpoint == phone-smallest {
-        @media only screen and (max-width: 24.38em) { @content }; // 390px
+    @if $breakpoint==phone-smallest {
+        @media only screen and (max-width: 24.38em) {
+            @content
+        }
+
+        ; // 390px
     }
 
-    @if $breakpoint == phone-smaller {
-        @media only screen and (max-width: 26.88em) { @content }; // 430px
+    @if $breakpoint==phone-smaller {
+        @media only screen and (max-width: 26.88em) {
+            @content
+        }
+
+        ; // 430px
     }
 
-    @if $breakpoint == phone-sm {
-        @media only screen and (max-width: 36.25em) { @content }; // 580px
+    @if $breakpoint==phone-sm {
+        @media only screen and (max-width: 36.25em) {
+            @content
+        }
+
+        ; // 580px
     }
 
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 43.75em) { @content }; // 700px
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 43.75em) {
+            @content
+        }
+
+        ; // 700px
     }
 
-    @if $breakpoint == tab-port2 {
-        @media only screen and (max-width: 50em) { @content }; // 800px
+    @if $breakpoint==tab-port2 {
+        @media only screen and (max-width: 50em) {
+            @content
+        }
+
+        ; // 800px
     }
 
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) { @content }; // 900px
+    @if $breakpoint==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+
+        ; // 900px
     }
 
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 79em) { @content }; // 1260px
+    @if $breakpoint==tab-land {
+        @media only screen and (max-width: 79em) {
+            @content
+        }
+
+        ; // 1260px
     }
 
-    @if $breakpoint == desktop {
-        @media only screen and (max-width: 90em) { @content }; // 1440px
+    @if $breakpoint==desktop {
+        @media only screen and (max-width: 90em) {
+            @content
+        }
+
+        ; // 1440px
     }
-   
+
 }
 
 @mixin price {
@@ -48,15 +80,15 @@
         @include respond(tab-land) {
             height: 5rem;
         }
-        
+
         @include respond (tab-port) {
-                width: 80%;
+            width: 80%;
         }
 
         @include respond(tab-port2) {
             height: 4rem;
         }
-       
+
         & h3 {
             color: $color-white;
             text-transform: uppercase;
@@ -71,7 +103,7 @@
             }
 
             @include respond(tab-port2) {
-               line-height: 2.4rem;
+                line-height: 2.4rem;
             }
         }
     }
@@ -98,6 +130,3 @@
         }
     }
 }
-
-
-

@@ -1,4 +1,3 @@
-
 *,
 *::after,
 *::before {
@@ -8,25 +7,28 @@
 }
 
 html {
-   
-    font-size: 62.5%;   
 
-        @include respond(tab-land) { // width < 1260
-            font-size: 56.25%;  // 1rem = 9px, 9/16 = 56.25% 
-        }
-    
-        @include respond(tab-port) { // width < 900
-            font-size: 50%; 
-        }
+    font-size: 62.5%;
+
+    @include respond(tab-land) {
+        // width < 1260
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        // width < 900
+        font-size: 50%;
+    }
 
 }
 
 body {
     box-sizing: border-box;
     max-width: 144rem;
-    padding: 3rem; 
+    padding: 3rem;
     scroll-behavior: smooth;
-    @include respond(phone) { 
+
+    @include respond(phone) {
         padding: 0;
     }
 }
@@ -64,9 +66,3 @@ div {
     font-family: FuturaDemic;
     text-align: center;
 }
-
-
-// header, footer, section, article, video, nav, iframe, div, li, ul {
-//     outline: 1px solid red;
-// }
-

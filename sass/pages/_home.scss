@@ -28,13 +28,13 @@ section {
             width: 90%;
         }
     }
-    
+
     &__video {
         position: absolute;
         top: -10%;
         left: 0;
         height: 110%;
-       transform: scaleX(1.04);
+        transform: scaleX(1.04);
 
         @include respond(phone) {
             min-width: 50%;
@@ -74,6 +74,7 @@ section {
 
         & ul {
             list-style: none;
+
             @include respond (phone-sm) {
                 text-align: center;
             }
@@ -89,6 +90,7 @@ section {
 
         & li:first-child {
             padding-bottom: 3rem;
+
             @include respond (phone-sm) {
                 display: block;
                 padding-bottom: 1.4rem;
@@ -119,7 +121,7 @@ section {
             left: 50%;
         }
 
-        
+
 
     }
 
@@ -150,10 +152,10 @@ section {
             line-height: 1rem;
 
 
-        @include respond(phone-sm) {
-            background-color: $color-grey-dark;
-            color: $color-white;
-        }
+            @include respond(phone-sm) {
+                background-color: $color-grey-dark;
+                color: $color-white;
+            }
         }
 
         &:after {
@@ -249,26 +251,26 @@ section {
         background-color: $color-white;
     }
 
-    &__checkbox:hover input ~  &__checkmark {
+    &__checkbox:hover input~&__checkmark {
         background-color: $color-white;
-      }
+    }
 
-      &__checkbox input:checked ~  &__checkmark {
+    &__checkbox input:checked~&__checkmark {
         background-color: $color-yellow;
         border: 0;
-      }
+    }
 
-      &__checkmark:after {
+    &__checkmark:after {
         content: "";
         position: absolute;
         display: none;
-      }
+    }
 
-      &__checkbox input:checked ~  &__checkmark::after {
+    &__checkbox input:checked~&__checkmark::after {
         display: block;
-      }
+    }
 
-      &__checkbox &__checkmark:after {
+    &__checkbox &__checkmark:after {
         left: 8px;
         top: 4px;
         width: 5px;
@@ -289,7 +291,7 @@ section {
             top: 2px;
         }
 
-      }
+    }
 }
 
 .section-repair {
@@ -315,14 +317,14 @@ section {
         }
     }
 
-    &__redecorate{
+    &__redecorate {
         position: relative;
         flex: 1 1 31%;
         margin-right: 2.4%;
 
-        & img { 
+        & img {
             max-width: 100%;
-          }
+        }
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -335,9 +337,9 @@ section {
         flex: 1 1 31%;
         margin-right: 2.4%;
 
-        & img { 
+        & img {
             max-width: 100%;
-          }
+        }
 
         @include respond(phone) {
             flex: 0 0 100%;
@@ -349,15 +351,16 @@ section {
         position: relative;
         flex: 1 1 31%;
 
-        & img { 
+        & img {
             max-width: 100%;
-          }
+        }
 
         @include respond(phone) {
             flex: 0 0 100%;
             margin-bottom: 0rem;
         }
     }
+
     &__description {
         position: absolute;
         top: 100%;
@@ -401,7 +404,7 @@ section {
 
     &__price {
         @include respond (tab-land) {
-                width: 73%;
+            width: 73%;
         }
 
         @include respond(tab-port2) {
@@ -435,74 +438,76 @@ section {
 
 
 .section-samples {
-        background: url(../../img/bg_samples.jpg);
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 8rem;
-                                    
+    background: url(../../img/bg_samples.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8rem;
+
     @include respond(tab-land) {
-       margin-top: 6rem;
-       min-height: 60rem;
+        margin-top: 6rem;
+        min-height: 60rem;
     }
 
     & * {
         @include respond(phone) {
             visibility: hidden;
-            
+
         }
     }
 
-        &__arrows {
-            visibility: hidden;
-        }
-             
+    &__arrows {
+        visibility: hidden;
+    }
 
-                &__arrows img:nth-child(1) {
-            
-                    @include respond(phone) {
-                    display: inline-block;
-                    visibility: visible;
-                    height: 7rem;
-                    position: absolute;
-                    left: 3.8rem;
-                    top: 50%;
-                    transform: translateY(-50%);
 
-                    &:hover, &:active {
-                        cursor: pointer;
-                        transform: translateY(-50%) scale(1.2);
-                    }
-                    }
-                    
-                }
-            
-                &__arrows img:nth-child(2) {
-                    @include respond(phone) {
-                    display: inline-block;
-                    visibility: visible;
-                    position: absolute;
-                    right: 2.8rem;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    z-index: 999;
-
-                    &:hover, &:active {
-                        cursor: pointer;
-                        transform: translateY(-50%) scale(1.2);
-                    }
-
-                    }
-                }
+    &__arrows img:nth-child(1) {
 
         @include respond(phone) {
-            background-image: url('../../img/light-bg.png');
-            background-position: center;
-            background-size: 90vw;
-            background-repeat: no-repeat;
+            display: inline-block;
+            visibility: visible;
+            height: 7rem;
+            position: absolute;
+            left: 3.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:hover,
+            &:active {
+                cursor: pointer;
+                transform: translateY(-50%) scale(1.2);
+            }
         }
-   
+
+    }
+
+    &__arrows img:nth-child(2) {
+        @include respond(phone) {
+            display: inline-block;
+            visibility: visible;
+            position: absolute;
+            right: 2.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+
+            &:hover,
+            &:active {
+                cursor: pointer;
+                transform: translateY(-50%) scale(1.2);
+            }
+
+        }
+    }
+
+    @include respond(phone) {
+        background-image: url('../../img/light-bg.png');
+        background-position: center;
+        background-size: 90vw;
+        background-repeat: no-repeat;
+    }
+
 
     & h2 {
         text-transform: uppercase;
@@ -537,7 +542,7 @@ section {
 
         @include respond(phone) {
             display: none;
-            
+
         }
 
         & ul {
@@ -549,15 +554,16 @@ section {
                 min-height: 40rem;
                 line-height: 1.8;
             }
-                
 
-                & li span:hover, & span:active {
-                    cursor: pointer;
-                    border-bottom: 1px solid $color-yellow;
-                    color: $color-yellow;
+
+            & li span:hover,
+            & span:active {
+                cursor: pointer;
+                border-bottom: 1px solid $color-yellow;
+                color: $color-yellow;
             }
 
-            & li:first-child span{
+            & li:first-child span {
                 color: $color-yellow;
                 border-bottom: 1px solid $color-yellow;
             }
@@ -570,7 +576,7 @@ section {
         flex-direction: column;
 
         @include respond(phone) {
-            display: none;   
+            display: none;
         }
 
         &--first {
@@ -592,7 +598,7 @@ section {
                 max-width: 100%;
             }
         }
-        
+
 
         & img:nth-child(even) {
             margin-top: 4rem;
@@ -604,7 +610,7 @@ section {
     }
 }
 
-.section-design-project{
+.section-design-project {
     min-height: 44rem;
     max-width: 144rem;
     margin-top: 8rem;
@@ -627,34 +633,34 @@ section {
     }
 
     &__heading {
-        flex: 0 0 100%;  
-        
+        flex: 0 0 100%;
+
         @include respond(phone) {
             padding-top: 2rem;
         }
     }
 
     &__control {
-         margin-bottom: 2rem;
-         color: $color-white;
-         font-family: YesevaOne;
-         font-size: 1.4rem;
-         text-transform: uppercase;
-         
- 
-         & h2 {
-             margin: 0 auto;
-             width: 80%;
-             text-align: center;
-             color: $color-black;
+        margin-bottom: 2rem;
+        color: $color-white;
+        font-family: YesevaOne;
+        font-size: 1.4rem;
+        text-transform: uppercase;
 
-             @include respond(phone) {
-                 color: $color-white;
-             }
-         }
-     }
 
-     @include heading-logo;
+        & h2 {
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+            color: $color-black;
+
+            @include respond(phone) {
+                color: $color-white;
+            }
+        }
+    }
+
+    @include heading-logo;
 
     &__text {
         width: 76rem;
@@ -671,14 +677,14 @@ section {
                 text-align: center;
                 line-height: 1.6;
             }
-            
+
         }
 
         @include respond(phone) {
             width: 90%;
         }
     }
-    
+
     &__mini {
         position: relative;
         transform: translateY(34%);
@@ -809,7 +815,7 @@ section {
     }
 
     @include price;
- 
+
 }
 
 .section-steps {
@@ -818,7 +824,7 @@ section {
     display: flex;
     background-color: #131313;
     z-index: -1;
-    
+
     @include respond(tab-land) {
         padding-top: 30rem;
     }
@@ -831,7 +837,7 @@ section {
 
         @include respond(tab-land) {
             margin-left: 6rem;
-        } 
+        }
 
         @include respond(tab-port) {
             flex: 0 0 30%;
@@ -923,18 +929,18 @@ section {
     }
 
     &__main {
-            display: flex;
-            flex: 0 0 61%;
-            color: $color-white;
-            flex-wrap: wrap;
+        display: flex;
+        flex: 0 0 61%;
+        color: $color-white;
+        flex-wrap: wrap;
     }
 
     &__list {
-        
+
         flex: 0 0 100%;
         color: $color-white;
         max-height: 20rem;
-        
+
         margin-top: 8.3rem;
 
         & ul {
@@ -987,16 +993,16 @@ section {
         max-width: 76.5rem;
         margin-left: 1rem;
         background: url('../../img/img_steps.jpg');
-        background-repeat:no-repeat;
-        background-size:contain;
+        background-repeat: no-repeat;
+        background-size: contain;
 
         @include respond (tab-port) {
             margin-left: 2rem;
-           
+
         }
 
         @include respond(tab-port2) {
-           max-width: 48rem;
+            max-width: 48rem;
         }
 
     }
@@ -1017,33 +1023,33 @@ section {
     }
 
     &__heading {
-        flex: 0 0 100%;  
-        background-color: #131313;   
+        flex: 0 0 100%;
+        background-color: #131313;
     }
 
     &__control {
         padding-top: 2.5rem;
-         margin-bottom: 2rem;
-         color: $color-white;
-         font-family: YesevaOne;
-         font-size: 1.4rem;
-         text-transform: uppercase;
+        margin-bottom: 2rem;
+        color: $color-white;
+        font-family: YesevaOne;
+        font-size: 1.4rem;
+        text-transform: uppercase;
 
-         @include respond(tab-land) {
+        @include respond(tab-land) {
             padding-top: 4rem;
             margin-bottom: 2rem;
-        } 
- 
-         & h2 {
-             margin: 0 auto;
-             width: 80%;
-             text-align: center;
-             font-family: YesevaOne;
-             font-size: 2rem;
-         }
-     }
+        }
 
-     @include heading-logo;
+        & h2 {
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+            font-family: YesevaOne;
+            font-size: 2rem;
+        }
+    }
+
+    @include heading-logo;
 
     &__text {
         width: 100%;
@@ -1061,9 +1067,9 @@ section {
                     font-family: FuturaBookC;
                     font-size: 2rem;
                 }
-    
+
             }
-            
+
             @include respond(tab-land) {
                 padding-bottom: 26rem;
             }
@@ -1083,7 +1089,7 @@ section {
         @include respond(tab-land) {
             transform: translate(+9%, +78%);
             width: 84%;
-        } 
+        }
 
         @include respond(tab-port) {
             transform: translate(+9%, +90%);
@@ -1110,6 +1116,7 @@ section {
             max-width: 303px;
             margin-bottom: 28rem;
         }
+
         img:nth-child(2) {
             width: 100%;
         }
@@ -1129,20 +1136,18 @@ section {
             transform: translate(-50%, -50%) scale(1);
 
             @include respond(tab-land) {
-            transform: translate(-50%, -50%) scale(0.8);
-            } 
+                transform: translate(-50%, -50%) scale(0.8);
+            }
 
             @include respond(tab-port) {
                 transform: translate(-50%, -50%) scale(0.6);
-                } 
+            }
         }
 
-      
-    }
-
-    &__profile:nth-child(even) {
 
     }
+
+    &__profile:nth-child(even) {}
 
     &__profile-info {
         position: absolute;
@@ -1162,19 +1167,19 @@ section {
         @include respond(tab-land) {
             transform: translate(-50%, 50%);
             padding-top: 1.6rem;
-        } 
+        }
 
         @include respond(tab-port) {
             width: 94%;
             transform: translate(-50%, 34%);
             padding-top: 0.6rem;
-            } 
+        }
 
-            @include respond(phone) {
-                width: 77%;
-                top: 100%;
-                transform: translate(-50%, 40%);
-            }
+        @include respond(phone) {
+            width: 77%;
+            top: 100%;
+            transform: translate(-50%, 40%);
+        }
 
         & * {
             display: inline-block;
@@ -1193,16 +1198,16 @@ section {
             @include respond(tab-land) {
                 font-size: 2.4rem;
                 padding: 0 3.3rem;
-            } 
+            }
 
             @include respond(tab-port) {
                 font-size: 2.4rem;
                 padding: 0 2rem;
-                } 
-            
-                @include respond(phone) {
-                    padding: 0 1rem;
-                    } 
+            }
+
+            @include respond(phone) {
+                padding: 0 1rem;
+            }
         }
 
         & span {
@@ -1215,11 +1220,11 @@ section {
 
             @include respond(tab-land) {
                 padding-bottom: 2rem;
-            } 
+            }
 
             @include respond(tab-port) {
                 padding-bottom: 0.4rem;
-            } 
+            }
         }
 
         & h4 {
@@ -1274,7 +1279,7 @@ section {
         font-size: 2rem;
 
         @include respond(phone) {
-           display: none;
+            display: none;
         }
 
         & ul {
@@ -1318,29 +1323,29 @@ section {
     }
 
     &__heading {
-        flex: 0 0 100%;   
+        flex: 0 0 100%;
         margin-bottom: 6rem;
 
- 
+
     }
 
     &__control {
-         margin-bottom: 2rem;
-         color: #181818;
-         font-family: YesevaOne;
-         font-size: 2rem;
-         text-transform: uppercase;
- 
-         & h2 {
-             margin: 0 auto;
-             width: 14.8%;
-             text-align: center;
-             font-family: YesevaOne;
-             font-size: 2rem;
-         }
-     }
+        margin-bottom: 2rem;
+        color: #181818;
+        font-family: YesevaOne;
+        font-size: 2rem;
+        text-transform: uppercase;
 
-     @include heading-logo;
+        & h2 {
+            margin: 0 auto;
+            width: 14.8%;
+            text-align: center;
+            font-family: YesevaOne;
+            font-size: 2rem;
+        }
+    }
+
+    @include heading-logo;
 
     &__text {
         width: 76rem;
@@ -1361,9 +1366,9 @@ section {
                     font-family: FuturaBookC;
                     font-size: 2rem;
                 }
-    
+
             }
-            
+
         }
     }
 
@@ -1371,7 +1376,8 @@ section {
         display: flex;
         justify-content: center;
     }
-    &__reviews{
+
+    &__reviews {
         position: relative;
         flex: 0 0 26.1%;
         height: 42.8rem;
@@ -1398,6 +1404,7 @@ section {
             margin: 0 2%;
         }
     }
+
     &__reviews-header {
         display: flex;
 
@@ -1421,6 +1428,7 @@ section {
             }
         }
     }
+
     &__reviews-text {
         font-size: 1.5rem;
         font-family: FuturaBookC;
@@ -1463,7 +1471,7 @@ section {
                 margin-top: 0;
             }
         }
-       
+
         & h3 {
             flex: 0 0 35%;
             color: $color-white;
@@ -1562,7 +1570,7 @@ section {
                 flex-direction: column;
             }
         }
-    
+
         &__name,
         &__phone,
         &__question,
@@ -1572,22 +1580,22 @@ section {
             display: flex;
             flex-direction: column;
             font-family: FuturaBookC;
-            margin-bottom: 3.2rem;  
-            opacity: 1;                                               
-    
+            margin-bottom: 3.2rem;
+            opacity: 1;
+
             & label {
                 flex: 0 0 20%;
                 font-size: 1.5rem;
                 opacity: 0.5;
                 line-height: 1rem;
-                color: $color-white;                       
+                color: $color-white;
                 padding-bottom: 0.8rem;
 
                 &:not(input) {
                     padding-top: 0.6rem;
                 }
             }
-    
+
             & input {
                 border: none;
                 font-size: 1.8rem;
@@ -1602,7 +1610,7 @@ section {
                     background-color: #131313;
                 }
             }
-    
+
             &:after {
                 display: block;
                 content: ".";
@@ -1630,7 +1638,7 @@ section {
             margin: 0 auto;
             margin-right: 4rem;
         }
-    
+
         &__submit {
             flex: 0 0 27%;
             background-color: $color-yellow;
@@ -1643,7 +1651,7 @@ section {
                 width: 100%;
             }
 
-    
+
             & button {
                 height: 5rem;
                 width: 20.1rem;
@@ -1663,21 +1671,21 @@ section {
                 }
             }
         }
-    
+
         &__checkbox {
             display: block;
             cursor: pointer;
             padding-left: 2.2rem;
             font-family: FuturaBookC;
             font-size: 1.6rem;
-    
+
             & input {
                 position: absolute;
                 opacity: 0;
                 cursor: pointer;
             }
         }
-    
+
         &__checkmark {
             position: absolute;
             top: 0;
@@ -1687,27 +1695,27 @@ section {
             border: 1px solid black;
             background-color: $color-white;
         }
-    
-        &__checkbox:hover input ~  &__checkmark {
+
+        &__checkbox:hover input~&__checkmark {
             background-color: $color-white;
-          }
-    
-          &__checkbox input:checked ~  &__checkmark {
+        }
+
+        &__checkbox input:checked~&__checkmark {
             background-color: $color-yellow;
             border: 0;
-          }
-    
-          &__checkmark:after {
+        }
+
+        &__checkmark:after {
             content: "";
             position: absolute;
             display: none;
-          }
-    
-          &__checkbox input:checked ~  &__checkmark::after {
+        }
+
+        &__checkbox input:checked~&__checkmark::after {
             display: block;
-          }
-    
-          &__checkbox &__checkmark:after {
+        }
+
+        &__checkbox &__checkmark:after {
             left: 8px;
             top: 4px;
             width: 5px;
@@ -1717,7 +1725,7 @@ section {
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-          }
+        }
 
         @include respond(phone) {
             min-width: 100%;
@@ -1750,11 +1758,11 @@ section {
             top: 65%
         }
 
-        
+
 
         & ul {
             list-style-type: none;
-             
+
             & li {
                 text-align: center;
                 font-family: YesevaOne;
@@ -1810,5 +1818,3 @@ section {
         }
     }
 }
-
-

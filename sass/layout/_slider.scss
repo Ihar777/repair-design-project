@@ -1,7 +1,7 @@
 .section-slider {
     background-color: $color-grey-dark;
     padding-bottom: 25rem;
-   
+
     &__top {
         position: relative;
         display: flex;
@@ -17,8 +17,8 @@
     }
 
     &__navigation {
-        display: flex; 
-        flex: 0 0 60%;  
+        display: flex;
+        flex: 0 0 60%;
         height: 6rem;
         padding-top: 3rem;
 
@@ -38,8 +38,8 @@
     }
 
     &__navigation-list {
-        display: flex; 
-        flex: 0 0 100%; 
+        display: flex;
+        flex: 0 0 100%;
         flex-direction: row;
         justify-content: space-around;
         align-content: center;
@@ -52,14 +52,15 @@
         letter-spacing: 1px;
     }
 
-    &__navigation-item:first-child  &__navigation-link {
+    &__navigation-item:first-child &__navigation-link {
         color: $color-yellow;
         border-bottom: 1px solid $color-yellow;
     }
 
-    &__navigation-link:hover, &__navigation-link:active {
-            border-bottom: 1px solid $color-yellow;
-            color: $color-yellow;
+    &__navigation-link:hover,
+    &__navigation-link:active {
+        border-bottom: 1px solid $color-yellow;
+        color: $color-yellow;
     }
 
 
@@ -154,13 +155,14 @@
         font-size: 1.7rem;
         color: $color-white;
         margin: 4rem 0;
+
         & ul {
             list-style: none;
             text-decoration: none;
 
             & li {
                 padding-top: 0.8rem;
-            } 
+            }
         }
 
         @include respond(tab-land) {
@@ -180,7 +182,7 @@
         }
     }
 
-    &__city, 
+    &__city,
     &__area,
     &__time,
     &__cost {
@@ -306,7 +308,7 @@
         }
 
         @include respond(phone-smaller) {
-           top: 284%;
+            top: 284%;
         }
 
         @include respond(phone-smallest) {
@@ -336,7 +338,7 @@
         @include respond(tab-port) {
             display: none;
         }
-  
+
 
         & img {
             position: relative;
@@ -363,24 +365,26 @@
         }
 
         & img {
-            position: relative;         
+            position: relative;
             display: block;
 
+            @include respond(phone) {
+                visibility: hidden;
+            }
+
+            &:nth-child(4),
+            &:nth-child(3) {
                 @include respond(phone) {
-                    visibility: hidden;
-                }
-
-                &:nth-child(4), &:nth-child(3) {
-                    @include respond(phone) {
                     visibility: visible;
-                    }
-
-                    &:hover, &:active {
-                        cursor: pointer;
-                        transform: translateY(-50%) scale(1.2);
-                    }
                 }
-            
+
+                &:hover,
+                &:active {
+                    cursor: pointer;
+                    transform: translateY(-50%) scale(1.2);
+                }
+            }
+
         }
 
         & img:first-child {
@@ -398,15 +402,15 @@
 
         & img:nth-child(3) {
 
-            display: none; 
+            display: none;
 
             @include respond(tab-port) {
-            display: inline-block;
-            height: 7rem;
-            position: absolute;
-            left: 2.8rem;
-            top: 50%;
-            transform: translateY(-50%);
+                display: inline-block;
+                height: 7rem;
+                position: absolute;
+                left: 2.8rem;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
